@@ -37,10 +37,11 @@ const Footer: React.FC = () => {
       {showModal && (
         <Modal
           isOpen={showModal}
-          children={<JoinCommunity />}
           onClick={() => setShowModal(!showModal)}
           showCloseButton
-        />
+        >
+          <JoinCommunity />
+        </Modal>
       )}
       <section className="pt-5 md:pt-1 flex flex-col md:flex-row justify-between">
         <div className="md:max-w-[40%] text-start">

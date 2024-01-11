@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import missionIcon from "../../assets/aboutUs/missionIcon.png";
 import missionImage from "../../assets/aboutUs/missionImage.png";
 import visionImage from "../../assets/aboutUs/visionImage.png";

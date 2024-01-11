@@ -1,5 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-import { FC } from "react";
+import Image, { type StaticImageData } from "next/image";
+import { type FC } from "react";
 
 interface CardProps {
   image: HTMLImageElement | string | StaticImageData;

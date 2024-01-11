@@ -15,7 +15,7 @@ const Modal: React.FC<ModalProps> = ({
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
-  const handleCloseModal = (event: React.MouseEvent) => {
+  const handleCloseModal = () => {
     onClick && onClick();
   };
 

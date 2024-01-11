@@ -13,7 +13,9 @@ const MobileDropdown: React.FC = () => {
   return (
     <div className="p-[16px]">
       {changeModal ? (
-        <Modal isOpen={changeModal} children={<JoinCommunity />} />
+        <Modal isOpen={changeModal}>
+          <JoinCommunity />
+        </Modal>
       ) : (
         <>
           {MenuData.map((item, index: number) => (

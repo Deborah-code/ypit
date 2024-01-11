@@ -43,10 +43,11 @@ const Navbar: React.FC = () => {
       {showModal && (
         <Modal
           isOpen={showModal}
-          children={<JoinCommunity />}
           onClick={() => setShowModal(!showModal)}
           showCloseButton
-        />
+        >
+          <JoinCommunity />
+        </Modal>
       )}
     </nav>
   );

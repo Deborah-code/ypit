@@ -8,10 +8,6 @@ import Modal from "./Modal";
 const MobileNavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <nav className="flex flex-row justify-between items-center w-[100%]">
       <Image
@@ -35,7 +31,9 @@ const MobileNavBar: React.FC = () => {
         )}
       </button>
       {isMenuOpen && (
-        <Modal isOpen={isMenuOpen} children={<MobileDropdown />} />
+        <Modal isOpen={isMenuOpen}>
+          <MobileDropdown />
+        </Modal>
       )}
     </nav>
   );

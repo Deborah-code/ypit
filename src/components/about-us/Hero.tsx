@@ -10,15 +10,15 @@ const Hero: React.FC = () => {
       <div className="flex flex-col md:flex-row text-start items-center justify-between gap-7">
         <section className="md:max-w-[50%]">
           <strong className="text-3">
-            We're Here to Help You Make Your Mark on the
+            We&apos;re Here to Help You Make Your Mark on the
             <span className="text-purple-100"> Tech Industry.</span>
           </strong>
           <p className="pt-8 text-4 text-gray-500">
             {" "}
             Welcome to a place where innovation knows no bounds, and your tech
-            dreams are fueled with endless possibilities. We're here to help you
-            make your indelible mark on the tech industry, and we couldn't be
-            more excited about your journey ahead.
+            dreams are fueled with endless possibilities. We&apos;re here to
+            help you make your indelible mark on the tech industry, and we
+            couldn&apos;t be more excited about your journey ahead.
           </p>
           <div className="flex justify-start pt-7">
             <Button text="Become an active member" />

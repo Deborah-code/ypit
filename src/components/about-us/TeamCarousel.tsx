@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -85,8 +85,8 @@ const TeamCarousel: React.FC = () => {
           width: "100%",
         }}
       >
-        {members.map((member) => (
-          <SwiperSlide>
+        {members.map((member, index) => (
+          <SwiperSlide key={index}>
             <TeamCard
               name={member.name}
               image={member.image}
