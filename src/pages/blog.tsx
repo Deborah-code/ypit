@@ -1,7 +1,7 @@
 import Script from "next/script";
 import { useEffect } from "react";
 
-const blog = () => {
+const Blog = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://substackapi.com/embeds/feed.js";
@@ -45,4 +45,4 @@ const blog = () => {
   );
 };
 
-export default blog;
+export default Blog;
