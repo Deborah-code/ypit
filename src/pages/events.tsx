@@ -1,3 +1,7 @@
+import Button from "../components/common/Button";
+import Vector from "../assets/events/Vector.png";
+import Image from "next/image";
+
 const events = () => {
   return (
     <main>
@@ -9,11 +13,14 @@ const events = () => {
           <h1 className="text-4 md:text-1 pb-8 md:inline">
             Our Biggest Tech Event Yet
           </h1>
-          <p className="text-4 max-w-[790px] m-auto">
+          <p className="text-6 max-w-[80%] md:text-4 md:max-w-[790px] m-auto">
             YPIT Series D is the latest installation of our community events,
-            where we host young people in Nigeria's tech ecosystem to come and
+            where we host young people in Nigeria&apos;s tech ecosystem to come and
             have a day of fun, learning, and networking on us.
           </p>
+          <div className="pt-8"><Button text="Save a spot now!"/></div>
+            <Image src={Vector}
+          alt="Series-D event" className="min-w-[100vw]"/>
         </section>
       </>
     </main>
