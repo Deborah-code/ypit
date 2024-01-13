@@ -26,6 +26,7 @@ const config: Config = {
             30: '#ADADAD',
           },
           white: '#FFFFFF',
+          
         },
         linearGradientColors: {
           'purple-yellow': ['91deg', '#5100BF 14.44%', '#FFD855 119.53%'],
