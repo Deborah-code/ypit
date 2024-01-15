@@ -5,15 +5,15 @@ export const MenuData = [
     },
     {
         title: 'About us',
-        path: '/about-us/'
+        path: '/about-us'
     },
     {
         title: 'Events',
-        path: '/events/'
+        path: '/events'
     },
     {
         title: 'Blog',
-        path: '/blog/'
+        path: '/blog'
     },
     
 
