@@ -65,7 +65,7 @@ const Events = () => {
             img3={seriesA2}
             img2={seriesA3}
             img1={seriesA4}
-            link="https://youngpeopleintech.pixieset.com/ypitseriesc/"
+            link="https://youngpeopleintech.pixieset.com/ypitseriesa/"
           />
           <Series
             title="B"
@@ -81,7 +81,7 @@ const Events = () => {
             img1={seriesC4}
             img2={seriesC2}
             img3={seriesC5}
-            link="https://youngpeopleintech.pixieset.com/ypitseriesa/"
+            link="https://youngpeopleintech.pixieset.com/ypitseriesc/"
           />
         </div>
         <Partners />
