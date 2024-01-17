@@ -18,7 +18,7 @@ import Button from "../components/common/Button";
 import JoinCommunity from "../components/common/JoinCommunity";
 import Modal from "../components/common/Modal";
 
-const events = () => {
+const Events = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleMenuClick = () => {
@@ -90,4 +90,4 @@ const events = () => {
   );
 };
 
-export default events;
+export default Events;

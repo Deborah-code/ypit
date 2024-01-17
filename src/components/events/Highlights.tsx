@@ -19,7 +19,7 @@ const Highlights = () => {
         </h2>
         <p className="lg:w-[30%] md:pb-5 ">
           Browse our gallery, take a tour, and share in the experience of all of
-          YPIT's previous events.
+          YPIT&apos;s previous events.
         </p>
       </article>
       <article className="grid grid-cols-6 grid-rows-[100px_43px_auto] gap-[1rem] w-[1300px] ml-[-150px] md:m-auto overflow-x-scroll">

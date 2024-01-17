@@ -7,9 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "../common/Button";
 
 interface Props {
-  title: String;
-  date: String;
-  link: String;
+  title: string;
+  date: string;
+  link: string;
   img1: HTMLImageElement | StaticImageData | string;
   img2: HTMLImageElement | StaticImageData | string;
   img3: HTMLImageElement | StaticImageData | string;

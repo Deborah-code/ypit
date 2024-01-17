@@ -1,11 +1,11 @@
 import Image, { type StaticImageData } from "next/image";
-import { CSSProperties, type FC } from "react";
+import { type FC } from "react";
 
 interface CardProps {
   image: HTMLImageElement | string | StaticImageData;
   heading: string;
   body: string;
-  color: CSSProperties["color"] | string;
+  color: string;
 }
 
 const Card: FC<CardProps> = ({ image, heading, body, color }) => {
