@@ -1,15 +1,16 @@
 import Image, { type StaticImageData } from "next/image";
-import { type FC } from "react";
+import { CSSProperties, type FC } from "react";
 
 interface CardProps {
   image: HTMLImageElement | string | StaticImageData;
   heading: string;
   body: string;
-  color: string;
+  color: CSSProperties["color"] | string;
 }
 
 const Card: FC<CardProps> = ({ image, heading, body, color }) => {
   const divClass = `bg-${color} rounded-3xl pt-9 px-9 md:pt-8 md:px-8 pb-8 w-full text-black text-start`;
+  console.log(color);
   return (
     <div className={divClass}>
       {image && (

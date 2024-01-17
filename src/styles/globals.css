@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* //fontsize
-colors
-spacing? */
+
 :root {
   --purple-100: #5100BF;
   --purple-50: #AF8AE2;
@@ -33,6 +31,4 @@ spacing? */
   --small-spacing-3: 16px;
 }
 
-/* body {
-  color: var(--purple-100);
-} */
+

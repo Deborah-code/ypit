@@ -20,9 +20,13 @@ const Hero: React.FC = () => {
             help you make your indelible mark on the tech industry, and we
             couldn&apos;t be more excited about your journey ahead.
           </p>
-          <div className="flex justify-start pt-7">
+          <a
+            href="https://chat.whatsapp.com/JGIXg7zr6vx48YJAFv8mF2"
+            target="_blank"
+            className="flex justify-start pt-7"
+          >
             <Button text="Become an active member" />
-          </div>
+          </a>
         </section>
         <Image src={heroStack} alt="globe" />
       </div>

@@ -1,69 +1,70 @@
-import React from 'react'
-import Image from 'next/image'
-import Button from '../common/Button'
-import { StaticImageData } from 'next/image'
-import { Swiper, SwiperSlide } from 'swiper/react';
-// import { EffectCoverflow, Pagination, Navigation } from 'swiper';
-import {Navigation} from 'swiper/modules';
-import {EffectCoverflow} from 'swiper/modules';
-import {Pagination} from 'swiper/modules';
-
-import seriesA1 from "../../assets/events/seriesA/1.png"
-import seriesB1 from "../../assets/events/seriesB/1.png"
-import seriesC1 from "../../assets/events/seriesC/1.png"
+import Image, { StaticImageData } from "next/image";
+import React from "react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { EffectCards } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Button from "../common/Button";
 
 interface Props {
-  src?: HTMLImageElement | StaticImageData | string;
   title: String;
   date: String;
+  link: String;
+  img1: HTMLImageElement | StaticImageData | string;
+  img2: HTMLImageElement | StaticImageData | string;
+  img3: HTMLImageElement | StaticImageData | string;
 }
-const Series: React.FC<Props> = ({src, title, date}) => {
+const Series: React.FC<Props> = ({ img1, img2, img3, title, date, link }) => {
   return (
     <div className="">
       <div className="mb-7  w-[max-content] mx-[auto] ">
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: '.swiper-pagination', clickable: true }}
-        
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      >
-        <SwiperSlide>
-          <Image src={seriesA1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={seriesB1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={seriesC1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={seriesA1} alt="slide_image" />
-        </SwiperSlide>
-
-      </Swiper >
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          style={{ width: 300, height: "auto" }}
+          loop={true}
+          modules={[EffectCards]}
+          cardsEffect={{}}
+        >
+          <>
+            <SwiperSlide>
+              <Image
+                src={img1}
+                alt="slide_image"
+                className="rounded-[16px] h-[400px]"
+                objectFit="contain"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={img2}
+                alt="slide_image"
+                className="rounded-[16px] h-[400px]"
+                objectFit="contain"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={img3}
+                alt="slide_image"
+                className="rounded-[16px] h-[400px]"
+                objectFit="contain"
+              />
+            </SwiperSlide>
+          </>
+        </Swiper>
       </div>
       <div className="">
         <h2 className="text-3 font-[500] mb-[8px] lg:mb-8">
-          {`Series ${title}`}
+          {`SERIES ${title}`}
         </h2>
-        <p className='text-5 font-[400] text-black-50 mb-8'>
-          {date}
-        </p>
-        <Button text="View Album" />
+        <p className="text-5 font-[400] text-black-50 mb-8">{date}</p>
+        <a href={`${link}`} target="_blank">
+          <Button text="View Album" />
+        </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Series
+export default Series;
