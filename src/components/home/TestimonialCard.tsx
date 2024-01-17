@@ -17,7 +17,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <div className="w-[300px] md:w-[495px]">
-      <Card body={comment} image="" heading="" color="purple-20" />
+      <Card body={comment} image="" heading="" color="bg-purple-20" />
       <div className="flex flex-row items-start gap-8 pt-9">
         <Image
           src={person}

@@ -9,8 +9,7 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ image, heading, body, color }) => {
-  const divClass = `bg-${color} rounded-3xl pt-9 px-9 md:pt-8 md:px-8 pb-8 w-full text-black text-start`;
-  console.log(color);
+  const divClass = `${color} rounded-3xl pt-9 px-9 md:pt-8 md:px-8 pb-8 w-full text-black text-start`;
   return (
     <div className={divClass}>
       {image && (
