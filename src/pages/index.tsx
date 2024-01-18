@@ -21,7 +21,12 @@ export default function Home() {
           ecosystem, brought together with a mission to make impact in Nigeria
           and Africa using technology
         </p>
-        <Button text="Join us now" />
+        <a
+          href="https://chat.whatsapp.com/JGIXg7zr6vx48YJAFv8mF2"
+          target="_blank"
+        >
+          <Button text="Join us now" />
+        </a>
       </div>
       <Image src={HeroCollage} alt="Hero Image" className="pt-4" />
       <Connect />

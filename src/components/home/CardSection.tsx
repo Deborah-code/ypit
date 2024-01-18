@@ -20,7 +20,7 @@ const CardSection: React.FC = () => {
             heading="Network"
             body="We're trying to take the awkwardness out of professional networking. YPIT's Series Events are our way of having fun with the community"
             image={network}
-            color="purple-20"
+            color="bg-purple-20"
           />
         </div>
         <div className="w-full md:w-[61.5%]">
@@ -28,7 +28,7 @@ const CardSection: React.FC = () => {
             heading="Connect and Learn"
             body="Join YPIT community members at one of our in-person events or online talks and webinars. Whether we're sharing insights on the tech ecosystem or just hanging out with similar minds in the same space, you'll be sure to find meaningful connections and learning opportunities at YPIT"
             image={connect}
-            color="purple-20"
+            color="bg-black-30/30"
           />
         </div>
         <div className="w-full md:w-[50%]">
@@ -36,7 +36,7 @@ const CardSection: React.FC = () => {
             heading="Grow"
             body="YPIT's mentorship programs, monthly newsletters, and The Innovation Hub help us offer you a lot whether you're looking to expand your skillsets, industry-specific knowledge, or just become a better professional."
             image={grow}
-            color="purple-20"
+            color="bg-yellow-30"
           />
         </div>
         <div className="w-full md:w-[45%]">
@@ -44,7 +44,7 @@ const CardSection: React.FC = () => {
             heading="Do work that has Impact"
             body="Join the YPIT Innovation Hub to get your hands dirty helping to run the community and serve it's growing members. The work we do serves real people and is useful for more than just resume building."
             image={work}
-            color="purple-20"
+            color="bg-green"
           />
         </div>
       </div>

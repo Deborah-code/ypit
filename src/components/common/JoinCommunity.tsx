@@ -20,7 +20,12 @@ const JoinCommunity: React.FC = () => {
         <section className="flex flex-row justify-between items-center gap-[18px] bg-purple-20 rounded-[41px] p-[8px] md:p-[16px]">
           <Icon icon="logos:whatsapp-icon" width="30" height="30" />
           <p>WhatsApp community</p>
-          <Button text="Join us now" />
+          <a
+            href="https://chat.whatsapp.com/JGIXg7zr6vx48YJAFv8mF2"
+            target="_blank"
+          >
+            <Button text="Join us now" />
+          </a>
         </section>
         <Image src={JoinCom} alt="Join Community" />
       </div>

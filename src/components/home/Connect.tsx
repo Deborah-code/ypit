@@ -45,7 +45,12 @@ const Connect: React.FC = () => {
               </p>
             </div>
           </div>
-          <Button text="Become an active member" />
+          <a
+            href="https://chat.whatsapp.com/JGIXg7zr6vx48YJAFv8mF2"
+            target="_blank"
+          >
+            <Button text="Become an active member" />
+          </a>
         </section>
       </div>
     </div>

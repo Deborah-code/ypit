@@ -9,7 +9,12 @@ interface CardDetails {
   heading: string;
   text: string;
   image: HTMLImageElement | string | StaticImageData;
-  flexDirection: "row" | "row-reverse" | "col" | "col-reverse" | undefined;
+  flexDirection:
+    | "flex-row"
+    | "flex-row-reverse"
+    | "flex-col"
+    | "flex-col-reverse"
+    | undefined;
 }
 
 const cardDetails: CardDetails[] = [
@@ -19,7 +24,7 @@ const cardDetails: CardDetails[] = [
     text: `The community's mission is to foster connections among young individuals in the field of technology across Africa 
         through the utilisation of physical events, virtual events, and targeted communication.`,
     image: missionImage,
-    flexDirection: "row",
+    flexDirection: "flex-row",
   },
   {
     icon: visionIcon,
@@ -27,7 +32,7 @@ const cardDetails: CardDetails[] = [
     text: `The community envisions becoming a thriving environment that fosters growth and development through networking for aspiring 
         and fledgling technologically interested individuals across Africa`,
     image: visionImage,
-    flexDirection: "row-reverse",
+    flexDirection: "flex-row-reverse",
   },
 ];
 
@@ -37,7 +42,7 @@ const Purpose = () => {
       {cardDetails.map((details, id) => {
         return (
           <div
-            className={`md:flex flex-row justify-between items-center text-left gap-4 md:gap-2`}
+            className={`md:flex ${details.flexDirection} justify-between items-center text-left gap-4 md:gap-2`}
             key={id}
           >
             <div>

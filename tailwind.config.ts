@@ -26,6 +26,7 @@ const config: Config = {
             30: '#ADADAD',
           },
           white: '#FFFFFF',
+          green: 'rgba(49, 255, 142, 0.15)'
           
         },
         linearGradientColors: {
