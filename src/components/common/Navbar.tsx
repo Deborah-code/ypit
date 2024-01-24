@@ -2,13 +2,19 @@ import { MenuData } from "@/data/menuData";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LogoImg from "../../assets/commons/navLogo.png";
 import Button from "./Button";
 import JoinCommunity from "./JoinCommunity";
 import Modal from "./Modal";
 const Navbar: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
+  useEffect(() => {
+    document.body.style.overflow = showModal === true ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto"
+    }
+  }, [showModal])
 
   const handleMenuClick = () => {
     setShowModal(!showModal);
