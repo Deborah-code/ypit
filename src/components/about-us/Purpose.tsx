@@ -49,7 +49,7 @@ const Purpose = () => {
               <Image
                 src={details.icon}
                 alt="icon"
-                className="pb-6 md:pb-4 h-ful w-[60px]"
+                className="pb-6 md:pb-4 w-[60px]"
               />
               <div className="max-w-[100%]">
                 <h2 className="font-bold text-2xl pb-9">{details.heading}</h2>
