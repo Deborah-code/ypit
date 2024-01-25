@@ -5,7 +5,6 @@ import { useWindowSize } from "@uidotdev/usehooks";
 
 const Layout = ({ children }) => {
   const windowWidth= useWindowSize().width;
-  console.log(windowWidth);
   return (
     <main
       className="flex flex-col items-center justify-between px-[16px] py-[24px] max-w-[1340px] m-auto text-center overflow-hidden"
