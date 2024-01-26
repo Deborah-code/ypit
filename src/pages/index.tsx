@@ -9,7 +9,7 @@ import Carousel from "../components/home/TestimonialCarousel";
 export default function Home() {
   return (
     <>
-      <h1 className="text-3 md:text-2 pt-3 md:pt-1">
+      <h1 className="text-3 md:text-2 pt-3 md:pt-1 font-bigshoulder">
         Creating a Space for Young People to{" "}
         <span className="bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text">
           Connect and&nbsp;Grow

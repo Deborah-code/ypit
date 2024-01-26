@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Testimonial {
@@ -57,7 +58,11 @@ const Carousel: React.FC = () => {
         slidesPerView={1}
         keyboard={true}
         spaceBetween={60}
-        mousewheel={true}
+        mousewheel={{
+          forceToAxis: true,
+          releaseOnEdges: true,
+        }}
+        modules={[Mousewheel]}
         breakpoints={{
           440: { slidesPerView: 1.6 },
           540: { slidesPerView: 1.9 },
@@ -65,7 +70,9 @@ const Carousel: React.FC = () => {
           740: { slidesPerView: 2.25 },
           768: { slidesPerView: 1.6 },
           940: { slidesPerView: 1.8 },
-          1040: { slidesPerView: 2.6 },
+          1040: { slidesPerView: 2.0 },
+          1190: { slidesPerView: 2.3 },
+          1225: { slidesPerView: 2.6 },
         }}
         style={{
           overflow: "visible",

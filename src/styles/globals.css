@@ -29,6 +29,16 @@
   --small-spacing-1: 32px;
   --small-spacing-2: 24px;
   --small-spacing-3: 16px;
+  --font-sans: ${sans.style.fontFamily};
+  --font-big-shoulder: ${big-shoulder.style.fontFamily};
+  --font-neue: ${neue.style.fontFamily};
 }
 
 
+body{
+  font-family: var(--font-neue);
+}
+
+h1{
+  font-family: var(--font-big-shoulder);
+}
