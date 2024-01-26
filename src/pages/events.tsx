@@ -3,7 +3,6 @@ import Highlights from "@/components/events/Highlights";
 import Series from "@/components/events/Series";
 import Image from "next/image";
 import { useState } from "react";
-
 import Vector from "../assets/events/Vector.png";
 import seriesA2 from "../assets/events/seriesA/2.jpg";
 import seriesA3 from "../assets/events/seriesA/3.jpg";
