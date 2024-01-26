@@ -16,35 +16,35 @@ interface Testimonial {
 }
 const testimonials: Testimonial[] = [
   {
-    name: "Bolu Ademola",
+    name: "Jemima",
     img: "",
-    role: "Data analyst",
+    role: "Digital Marketer",
     comment:
-      "Lorem ipsum dolor sit amet consectetur. Duis pharetra at commodo urna sed eu consectetur eget adipiscing. Elit sed imperdiet diam mi viverra neque vivamus nunc.",
+      "When I attend this last one I came as an aspiring tech, I met a lot of people and now here I am a digital marketer all thanks to YPIT orientations.",
     key: 0,
   },
   {
-    name: "Bolu Ademola",
+    name: "Femi",
     img: "",
-    role: "Data Scientist",
+    role: "Tech Lawyer",
     comment:
-      "Lorem ipsum dolor sit amet consectetur. Duis pharetra at commodo urna sed eu consectetur eget adipiscing. Elit sed imperdiet diam mi viverra neque vivamus nunc.",
+      "Was a beautiful concept, very lively, practical and a pool for networking.",
     key: 0,
   },
   {
-    name: "Bolu Ademola",
+    name: "David",
     img: "",
-    role: "Tech analyst",
+    role: "Aspring Web Developer",
     comment:
-      "Lorem ipsum dolor sit amet consectetur. Duis pharetra at commodo urna sed eu consectetur eget adipiscing. Elit sed imperdiet diam mi viverra neque vivamus nunc.",
+      "It was nice and very educative, i met a lot of bright thinking people.",
     key: 0,
   },
   {
-    name: "Bolu Ademola",
+    name: "Oluwatobi",
     img: "",
-    role: "Data analyst",
+    role: "Business process engineer",
     comment:
-      "Lorem ipsum dolor sit amet consectetur. Duis pharetra at commodo urna sed eu consectetur eget adipiscing. Elit sed imperdiet diam mi viverra neque vivamus nunc.",
+      "It was awesome. I got to network with likeminded people who I am still in contact with",
     key: 0,
   },
 ];
