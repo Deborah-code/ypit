@@ -5,7 +5,7 @@ import { Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Daniel from "../../assets/aboutUs/daniel.jpg";
-import Deborah from "../../assets/aboutUs/debbie.jpg";
+import Debbie from "../../assets/aboutUs/debbie.jpg";
 import Dorcas from "../../assets/aboutUs/dorcas.jpg";
 import Tobi from "../../assets/aboutUs/tobi.jpg";
 
@@ -42,7 +42,7 @@ const members: TeamProps[] = [
   },
   {
     name: "Deborah Adewunmi",
-    image: Deborah,
+    image: Debbie,
     role: "Leader of the Tech  pack",
   },
   {
