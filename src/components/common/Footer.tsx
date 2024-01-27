@@ -67,19 +67,26 @@ const Footer: React.FC = () => {
           <div className="text-purple-100 text-start pt-8">
             <strong>Follow us on socials</strong>
             <div className="flex justify-start items-center gap-8 pt-8">
-              <Icon icon="mdi:twitter" width={24} height={24} color="#5100BF" />
-              <Icon
-                icon="mdi:instagram"
-                width={24}
-                height={24}
-                color="#5100BF"
-              />
-              <Icon
-                icon="formkit:linkedin"
-                width={24}
-                height={24}
-                color="#5100BF"
-              />
+              <a href="https://twitter.com/Ypeopleintech" target="_blank">
+                <Icon icon="pajamas:twitter" width={24} height={24} color="#5100BF" />
+              </a>
+              <a href="https://www.instagram.com/young_people_in_tech?igsh=azIzaXgzdDNvYWJq" target="_blank">
+                <Icon
+                  icon="mdi:instagram"
+                  width={24}
+                  height={24}
+                  color="#5100BF"
+                />
+              </a>
+              <a href="https://www.linkedin.com/company/young-people-in-tech-ypit/" target="_blank">
+                <Icon
+                  icon="formkit:linkedin"
+                  width={24}
+                  height={24}
+                  color="#5100BF"
+                />
+              </a>
+              
             </div>
           </div>
         </div>
