@@ -3,7 +3,6 @@ import Highlights from "@/components/events/Highlights";
 import Series from "@/components/events/Series";
 import Image from "next/image";
 import { useState } from "react";
-
 import Vector from "../assets/events/Vector.png";
 import seriesA2 from "../assets/events/seriesA/2.jpg";
 import seriesA3 from "../assets/events/seriesA/3.jpg";
@@ -40,11 +39,16 @@ const Events = () => {
             come and have a day of fun, learning, and networking on us.
           </p>
           <div className="pt-8">
-            <Button
-              globeButton
-              text="Join Our Community"
-              onClick={handleMenuClick}
-            />
+            <div className="flex items-center justify-center gap-[32px]">
+              <Button
+                globeButton
+                text="Join Our Community"
+                onClick={handleMenuClick}
+              />
+              <a href="mailto:someoneintech@gmail.com" target="_blank">
+                <p className="text-purple-100 underline">Become a sponsor</p>
+              </a>
+            </div>
             {showModal && (
               <Modal
                 isOpen={showModal}
@@ -60,12 +64,12 @@ const Events = () => {
         <Highlights />
         <div className="flex flex-col md:flex-row justify-evenly gap-8 md:pt-1">
           <Series
-            title="A"
-            date="22nd January 2022"
-            img3={seriesA2}
-            img2={seriesA3}
-            img1={seriesA4}
-            link="https://youngpeopleintech.pixieset.com/ypitseriesa/"
+            title="C"
+            date="29th April 2023"
+            img1={seriesC4}
+            img2={seriesC2}
+            img3={seriesC5}
+            link="https://youngpeopleintech.pixieset.com/ypitseriesc/"
           />
           <Series
             title="B"
@@ -76,12 +80,12 @@ const Events = () => {
             link="https://youngpeopleintech.pixieset.com/ypitseriesb/"
           />
           <Series
-            title="C"
-            date="29th April 2023"
-            img1={seriesC4}
-            img2={seriesC2}
-            img3={seriesC5}
-            link="https://youngpeopleintech.pixieset.com/ypitseriesc/"
+            title="A"
+            date="22nd January 2022"
+            img3={seriesA2}
+            img2={seriesA3}
+            img1={seriesA4}
+            link="https://youngpeopleintech.pixieset.com/ypitseriesa/"
           />
         </div>
         <Partners />

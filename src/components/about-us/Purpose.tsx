@@ -49,7 +49,7 @@ const Purpose = () => {
               <Image
                 src={details.icon}
                 alt="icon"
-                className="pb-6 md:pb-4 h-full w-[60px] md:w-[104px]"
+                className="pb-6 md:pb-4 w-[60px]"
               />
               <div className="max-w-[100%]">
                 <h2 className="font-bold text-2xl pb-9">{details.heading}</h2>
@@ -57,7 +57,7 @@ const Purpose = () => {
               </div>
             </div>
             <div className="image_container p-8 rounded-2xl border border-purple-50 md:w-[50%] min-w-[50%] mt-7">
-              <Image src={details.image} alt="Hero Image" />
+              <Image src={details.image} alt="Hero Image" className="rounded-xl" />
             </div>
           </div>
         );

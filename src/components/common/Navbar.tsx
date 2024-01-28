@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
   const router = useRouter();
 
   return (
-    <nav className="w-[100%] flex items-center justify-between px-[20px] py-[20px] border-b-2 border-gray-300 max-w-1320 mx-auto text-purple-100">
+    <nav className="w-[100%] flex items-center justify-between px-[20px] py-[20px] border-b border-gray-300 max-w-1320 mx-auto text-purple-100">
       <Image
         src={LogoImg}
         alt="Logo"
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
             <p
               className={
                 router.pathname === item.path
-                  ? "border-b-4 border-purple-800"
+                  ? "border-b-2 border-purple-800 rounded-t"
                   : ""
               }
             >
