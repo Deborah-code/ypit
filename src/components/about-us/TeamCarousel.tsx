@@ -3,7 +3,6 @@ import React from "react";
 import "swiper/css";
 import { Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import Daniel from "../../assets/aboutUs/daniel.jpg";
 import Debbie from "../../assets/aboutUs/debbie.jpg";
 import Dorcas from "../../assets/aboutUs/dorcas.jpg";
