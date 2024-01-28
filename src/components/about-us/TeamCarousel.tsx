@@ -63,7 +63,7 @@ const TeamCarousel: React.FC = () => {
       <h1 className="text-4 md:text-2 pt-5 md:pt-1 pb-8 md:pd-4">
         Meet our Amazing Team at{" "}
         <span className="bg-gradient-to-r from-purple-100 via-purple-100/55 to-yellow-100 inline-block text-transparent bg-clip-text">
-          YPIT?
+          YPIT
         </span>
       </h1>
       <Swiper
