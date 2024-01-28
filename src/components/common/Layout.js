@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
       className={`flex flex-col items-center justify-between px-[16px] py-[24px] max-w-[1340px] m-auto text-center overflow-hidden`}
     >
         <div className="hidden md:block w-[100%]">
-        <Navbar />
+         <Navbar />
         </div>
     <div className="block  w-[100%] md:hidden">
       <MobileNavBar />

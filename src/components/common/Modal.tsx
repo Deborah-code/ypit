@@ -23,7 +23,7 @@ const Modal: React.FC<ModalProps> = ({
     <>
       {isOpen && (
         <main
-          className="fixed top-[85px] left-0 flex items-center justify-center z-50 w-[100vw] md:w-[60%] md:left-[20%]  md:inset-0  max-h-ful"
+          className="fixed top-[74px] left-0 flex items-center justify-center z-50 w-[100vw] md:w-[60%] md:left-[20%]  md:inset-0  max-h-[99vh]"
           onClick={handleCloseModal}
         >
           <div
