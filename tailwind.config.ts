@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-
+const { fontFamily } = require('tailwindcss/defaultTheme')
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -56,6 +56,13 @@ const config: Config = {
           '7': '32px',
           '8': '24px',
           '9': '16px',
+        },
+
+        fontFamily: {
+          // add the css variable and include fallback fonts from tailwind default theme
+          sans: ['var(--font-sans)', ...fontFamily.sans],
+          bigshoulder: ['var(--font-big-shoulder)', ...fontFamily.sans],
+          neue: ['var(--font-neue)', ...fontFamily.sans],
         },
       },
   },
