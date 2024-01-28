@@ -4,7 +4,7 @@ import "swiper/css";
 import { Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Daniel from "../../assets/aboutUs/daniel.jpg";
-import Debbie from "../../assets/aboutUs/debbie.jpg";
+import Deborah from "../../assets/aboutUs/deborah.jpg";
 import Dorcas from "../../assets/aboutUs/dorcas.jpg";
 import Tobi from "../../assets/aboutUs/tobi.jpg";
 
@@ -21,7 +21,7 @@ const TeamCard: React.FC<TeamProps> = ({ image, name, role }) => {
       <Image
         src={image}
         alt={name}
-        className="rounded-lg w-[272px] md:w-[409px]  h-[308px] md:h-[560px]"
+        className="rounded-lg w-[272px] md:w-[409px]  h-[308px] md:h-[500px]"
       />
       <div className="w-[100%] absolute bottom-0 rounded-lg">
         <div className=" bg-gradient-to-b from-transparent via-black-30/70 to-black-100 p-9">
@@ -41,7 +41,7 @@ const members: TeamProps[] = [
   },
   {
     name: "Deborah Adewunmi",
-    image: Debbie,
+    image: Deborah,
     role: "Leader of the Tech  pack",
   },
   {
