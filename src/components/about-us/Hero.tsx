@@ -33,13 +33,13 @@ const Hero: React.FC = () => {
       <section className="pt-4 md:pt-1 ">
         <Image src={heroImage} alt="globe" />
         <div className="flex flex-row pt-7 justify-center gap-1">
-          <div className="flex flex-row items-center gap-9 bg-gradient-radial    from-yellow-100/75 via-purple-50/10 to-white bg-blend-lighten rounded-[50%]">
+          <div className="flex flex-row items-center gap-9 ">
             <p className="text-4 md:text-3 text-gray-900">1000+</p>
             <p className="text-base text-gray-500 text-start">
               Active <br /> members
             </p>
           </div>
-          <div className="flex flex-row items-center gap-9 bg-gradient-radial    from-yellow-100/75 via-purple-50/10 to-white bg-blend-lighten rounded-[50%]">
+          <div className="flex flex-row items-center gap-9 bg-gradient-radial  ">
             <p className="text-4 md:text-3 text-gray-900">5+</p>
             <p className="text-base text-gray-500 text-start">
               Community <br /> Events

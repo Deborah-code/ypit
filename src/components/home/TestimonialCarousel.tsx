@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Testimonial {
@@ -15,35 +16,35 @@ interface Testimonial {
 }
 const testimonials: Testimonial[] = [
   {
-    name: "Bolu Ademola",
+    name: "Jemima",
     img: "",
-    role: "Data analyst",
+    role: "Digital Marketer",
     comment:
-      "Lorem ipsum dolor sit amet consectetur. Duis pharetra at commodo urna sed eu consectetur eget adipiscing. Elit sed imperdiet diam mi viverra neque vivamus nunc.",
+      "When I attend this last one I came as an aspiring tech, I met a lot of people and now here I am a digital marketer all thanks to YPIT orientations.",
     key: 0,
   },
   {
-    name: "Bolu Ademola",
+    name: "Femi",
     img: "",
-    role: "Data Scientist",
+    role: "Tech Lawyer",
     comment:
-      "Lorem ipsum dolor sit amet consectetur. Duis pharetra at commodo urna sed eu consectetur eget adipiscing. Elit sed imperdiet diam mi viverra neque vivamus nunc.",
+      "Was a beautiful concept, very lively, practical and a pool for networking.",
     key: 0,
   },
   {
-    name: "Bolu Ademola",
+    name: "David",
     img: "",
-    role: "Tech analyst",
+    role: "Aspring Web Developer",
     comment:
-      "Lorem ipsum dolor sit amet consectetur. Duis pharetra at commodo urna sed eu consectetur eget adipiscing. Elit sed imperdiet diam mi viverra neque vivamus nunc.",
+      "It was nice and very educative, i met a lot of bright thinking people.",
     key: 0,
   },
   {
-    name: "Bolu Ademola",
+    name: "Oluwatobi",
     img: "",
-    role: "Data analyst",
+    role: "Business process engineer",
     comment:
-      "Lorem ipsum dolor sit amet consectetur. Duis pharetra at commodo urna sed eu consectetur eget adipiscing. Elit sed imperdiet diam mi viverra neque vivamus nunc.",
+      "It was awesome. I got to network with likeminded people who I am still in contact with",
     key: 0,
   },
 ];
@@ -57,7 +58,11 @@ const Carousel: React.FC = () => {
         slidesPerView={1}
         keyboard={true}
         spaceBetween={60}
-        mousewheel={true}
+        mousewheel={{
+          forceToAxis: true,
+          releaseOnEdges: true,
+        }}
+        modules={[Mousewheel]}
         breakpoints={{
           440: { slidesPerView: 1.6 },
           540: { slidesPerView: 1.9 },
@@ -65,7 +70,9 @@ const Carousel: React.FC = () => {
           740: { slidesPerView: 2.25 },
           768: { slidesPerView: 1.6 },
           940: { slidesPerView: 1.8 },
-          1040: { slidesPerView: 2.6 },
+          1040: { slidesPerView: 2.0 },
+          1190: { slidesPerView: 2.3 },
+          1225: { slidesPerView: 2.6 },
         }}
         style={{
           overflow: "visible",

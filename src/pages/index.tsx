@@ -1,8 +1,7 @@
 import Button from "@/components/common/Button";
+import Partners from "@/components/common/Partners";
 import CardSection from "@/components/home/CardSection";
 import Connect from "@/components/home/Connect";
-
-import Partners from "@/components/common/Partners";
 import Image from "next/image";
 import HeroCollage from "../assets/home/ypit-hero-collage.png";
 import Carousel from "../components/home/TestimonialCarousel";

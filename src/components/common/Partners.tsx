@@ -20,7 +20,7 @@ const Partners = () => {
   return (
     <div>
       <h3 className="text-4 md:text-2 pt-5 md:pt-1 pb-8 md:pd-4">
-        Our partners so far
+        Some of our recent partners
       </h3>
       <div className="flex flex-row justify-center items-center gap-[24px] md:gap-[56px] px-[18px]">
         <Image

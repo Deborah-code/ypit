@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import "swiper/css";
 import "swiper/css/effect-cards";

@@ -1,13 +1,14 @@
 import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import "swiper/css";
+import { Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Daniel from "../../assets/aboutUs/Daniel.png";
-import Dorcas from "../../assets/aboutUs/Dorcas.png";
-import Tobi from "../../assets/aboutUs/Tobi.png";
-import Deborah from "../../assets/aboutUs/deb.jpg";
+import Daniel from "../../assets/aboutUs/daniel.jpg";
+import Deborah from "../../assets/aboutUs/deborah.jpg";
+import Dorcas from "../../assets/aboutUs/dorcas.jpg";
+import Tobi from "../../assets/aboutUs/tobi.jpg";
 
-import Biola from "../../assets/aboutUs/biola.png";
+import Biola from "../../assets/aboutUs/diji.jpg";
 
 interface TeamProps {
   image: HTMLImageElement | string | StaticImageData;
@@ -16,15 +17,17 @@ interface TeamProps {
 }
 const TeamCard: React.FC<TeamProps> = ({ image, name, role }) => {
   return (
-    <div className="relatice">
+    <div className="relative rounded-lg overflow-hidden">
       <Image
         src={image}
         alt={name}
-        className="rounded-lg w-[272px] md:w-[409px] pb-8 h-[408px] md:h-[580px]"
+        className="rounded-lg w-[272px] md:w-[409px]  h-[308px] md:h-[500px]"
       />
-      <div className="absolute bottom-7 left-9 md:bottom-6 md:left-8">
-        <p className="text-white">{name}</p>
-        <strong className="text-yellow-100 text-6">{role}</strong>
+      <div className="w-[100%] absolute bottom-0 rounded-lg">
+        <div className=" bg-gradient-to-b from-transparent via-black-30/70 to-black-100 p-9">
+          <h3 className="text-white text-4">{name}</h3>
+          <p className="text-yellow-100 text-6">{role}</p>
+        </div>
       </div>
     </div>
   );
@@ -70,7 +73,11 @@ const TeamCarousel: React.FC = () => {
         slidesPerView={1.65}
         keyboard={true}
         spaceBetween={30}
-        mousewheel={true}
+        mousewheel={{
+          forceToAxis: true,
+          releaseOnEdges: true,
+        }}
+        modules={[Mousewheel]}
         breakpoints={{
           440: { slidesPerView: 2.1 },
           640: { slidesPerView: 2.6 },
