@@ -8,7 +8,7 @@ const Connect: React.FC = () => {
       <div className="flex flex-col md:flex-row text-start items-center justify-between gap-7">
         <div className="md:max-w-[50%]">
           <strong className="text-3">
-            Connecting, empowering and Impacting the next generation of{" "}
+            Connecting, Empowering and Impacting the next generation of{" "}
             <span className="text-purple-100"> tech innovators.</span>
           </strong>
           <p className="pt-8 text-4 text-gray-500">

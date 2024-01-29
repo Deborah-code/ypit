@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     img: "",
     role: "Digital Marketer",
     comment:
-      "When I attend this last one I came as an aspiring tech, I met a lot of people and now here I am a digital marketer all thanks to YPIT orientations.",
+      "When I attended the last one I came as an aspiring tech enthusiast, I met a lot of people and now here I am a digital marketer all thanks to YPIT's orientations.",
     key: 0,
   },
   {
@@ -36,7 +36,7 @@ const testimonials: Testimonial[] = [
     img: "",
     role: "Aspring Web Developer",
     comment:
-      "It was nice and very educative, i met a lot of bright thinking people.",
+      "It was nice and very educative, I met a lot of bright thinking people.",
     key: 0,
   },
   {

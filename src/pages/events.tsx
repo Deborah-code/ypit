@@ -45,7 +45,7 @@ const Events = () => {
                 text="Join Our Community"
                 onClick={handleMenuClick}
               />
-              <a href="mailto:someoneintech@gmail.com" target="_blank">
+              <a href="mailto:hello@someoneintech.com" target="_blank">
                 <p className="text-purple-100 underline">Become a sponsor</p>
               </a>
             </div>
