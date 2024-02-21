@@ -1,24 +1,9 @@
 import Footer from "@/components/common/Footer";
 import MobileNavBar from "@/components/common/MobileNavBar";
 import Navbar from "@/components/common/Navbar";
-// import {
-//     Big_Shoulders_Display as Display,
-//     Inter as Sans,
-// } from '@next/font/google';
-// import localFont from 'next/font/local';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
-// const neueFont = localFont({ src: "../../fonts/HelveticaNeue/HelveticaNeueRegular/HelveticaNeueRegular.otf", variable: '--font-neue' })
-// const sans = Sans({
-//     subsets: ['latin'],
-//     style: ['normal'],
-//     variable: '--font-sans',
-//   });
- 
-//   const display = Display({
-//     subsets: ['latin'],
-//     style: ['normal'],
-//     variable: '--font-big-shoulders-display',
-//   });
 
 const Layout = ({ children }) => {
   return (
@@ -32,6 +17,8 @@ const Layout = ({ children }) => {
       <MobileNavBar />
     </div>
     {children}
+    <Analytics />
+    <SpeedInsights />
     <Footer/>
     </main>
   );
