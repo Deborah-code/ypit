@@ -1,6 +1,8 @@
 import Footer from "@/components/common/Footer";
 import MobileNavBar from "@/components/common/MobileNavBar";
 import Navbar from "@/components/common/Navbar";
+import { Analytics } from '@vercel/analytics/react';
+
 // import {
 //     Big_Shoulders_Display as Display,
 //     Inter as Sans,
@@ -32,6 +34,7 @@ const Layout = ({ children }) => {
       <MobileNavBar />
     </div>
     {children}
+    <Analytics />
     <Footer/>
     </main>
   );
