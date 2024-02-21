@@ -2,6 +2,8 @@ import Footer from "@/components/common/Footer";
 import MobileNavBar from "@/components/common/MobileNavBar";
 import Navbar from "@/components/common/Navbar";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 const Layout = ({ children }) => {
   return (
@@ -16,6 +18,7 @@ const Layout = ({ children }) => {
     </div>
     {children}
     <Analytics />
+    <SpeedInsights />
     <Footer/>
     </main>
   );
