@@ -39,7 +39,7 @@ const Countdown = () => {
       <div style={{backgroundColor: "#fff"}} className=' p-[12px] md:w-[max-content] rounded-[1rem] '>
         <p className=' text-purple-100 text-[1.5rem] ' >Series E</p>
         {countDown.length && countDown.join("").split("").map((char: string | number) => (
-          <span className={` ${char !== ":" ? "bg-purple-20" : ""} text-purple-100 mx-[5px] py-[5px] px-[5px] text-3 `}>
+          <span key={char} className={` ${char !== ":" ? "bg-purple-20" : ""} text-purple-100 mx-[5px] py-[5px] px-[5px] text-3 `}>
             {char}
           </span>
         ))}
