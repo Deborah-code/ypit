@@ -13,6 +13,12 @@ import seriesB3 from "../assets/events/seriesB/4.jpg";
 import seriesC2 from "../assets/events/seriesC/2.jpg";
 import seriesC4 from "../assets/events/seriesC/4.jpg";
 import seriesC5 from "../assets/events/seriesC/5.jpg";
+import location from "../assets/events/location.svg";
+import founder1 from "../assets/events/founder1.svg";
+import founder2 from "../assets/events/founder2.svg";
+import founder3 from "../assets/events/founder3.svg";
+import founder4 from "../assets/events/founder4.svg";
+import founder5 from "../assets/events/founder5.svg";
 import Button from "../components/common/Button";
 import JoinCommunity from "../components/common/JoinCommunity";
 import Modal from "../components/common/Modal";
@@ -60,6 +66,47 @@ const Events = () => {
             )}{" "}
           </div>
           <Image src={Vector} alt="Series-D event" className="min-w-[100vw]" />
+          <Image className="w-full" alt="Time and Location" src={location} />
+          <div className="pt-16">
+            <h3 className="pr-24 text-2xl md:flex md:pl-32 md:text-5xl font-normal ">
+              Meet Our Speakers
+            </h3>
+          </div>
+          <div className=" md:flex md:gap-[12px] md:px-32 ">
+            <div>
+              <Image
+                className=" h-[848px] w-[340] md:w-[758px]"
+                alt="founders image"
+                src={founder1}
+              />
+            </div>
+            <div className="   md:flex md:flex-col md:gap-[7px] md:pt-20">
+              <div className=" md:flex md:gap-[10px]">
+                <Image
+                  className="w-[369px] h-[340px]"
+                  src={founder2}
+                  alt="speaker 2"
+                />
+                <Image
+                  className="w-[369px] h-[340px]"
+                  src={founder3}
+                  alt="speaker 3"
+                />
+              </div>
+              <div className="  md:flex md:gap-[10px]">
+                <Image
+                  className="w-[369px] h-[340px]"
+                  src={founder4}
+                  alt="speaker 4"
+                />
+                <Image
+                  className="w-[369px] h-[340px]"
+                  src={founder5}
+                  alt="speaker 5"
+                />
+              </div>
+            </div>
+          </div>
         </section>
         <Highlights />
         <div className="flex flex-col md:flex-row justify-evenly gap-8 md:pt-1">
