@@ -1,12 +1,13 @@
 import Footer from "@/components/common/Footer";
 import MobileNavBar from "@/components/common/MobileNavBar";
 import Navbar from "@/components/common/Navbar";
+
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
 type Props = {
   children: string | JSX.Element | JSX.Element[];
 };
+
 const Layout = ({ children }: Props) => {
   return (
     <main

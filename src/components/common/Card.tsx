@@ -17,6 +17,7 @@ const Card: FC<CardProps> = ({ image, heading, body, color }) => {
           src={image}
           alt={heading}
           className="rounded-lg w-full pb-8 h-[235px]"
+          objectFit="contain"
         />
       )}
       <div>

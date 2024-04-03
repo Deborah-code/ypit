@@ -9,7 +9,7 @@ const CardSection: React.FC = () => {
   return (
     <div className="pt-1 flex flex-col items-center ">
       <p className="text-4xl font-bold pb-4">
-        Why join{" "}
+        Why join{"   "}
         <span className="bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text">
           YPIT?
         </span>
