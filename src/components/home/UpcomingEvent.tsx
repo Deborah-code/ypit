@@ -5,7 +5,6 @@ import Countdown from './Countdown'
 import Card from '../common/Card'
 import card1 from "../../assets/home/card1.png"
 
-const xxx = `grid md:grid-cols-2 gap-y-[2rem] gap-x-[1rem] p-8 rounded-[1.5rem] my-[4rem] w-[100%] bg-red-500 overflow-hidden `
 const UpcomingEvent = () => {
   return (
     <div className="p-8 my-[4rem] bg-[#FA8A1A] w-[100%] rounded-[1.5rem] flex flex-col gap-y-[2rem] gap-x-[1rem] md:grid  md:grid-cols-2 " 

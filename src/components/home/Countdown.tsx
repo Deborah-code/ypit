@@ -17,7 +17,7 @@ const Countdown = () => {
         seconds: diff > 0 ? Math.floor((diff / 1000) % 60): 0
       };
       const arr = Object.values(timeLeft).reduce( // Reduce the values of the timeLeft object to an array
-        (acc: string[], val: number | string, index: number, array: (number | string)[]) => {
+        (acc: string[], val: number | string) => {
           // const value = String(val).length < 2 ? "0" + String(val) : String(val) // check if the current value's length is greater than 1, then use it string value else add prefix 0 => 01
           // const paddedVal = typeof val === 'number' && index > 1 && val < 10 ? String(val).padStart(2, '0') : val; // Convert single-digit numbers to two-digit format by padding with leading zero
           acc.push(String(val)); // push the new value to accumulator array
