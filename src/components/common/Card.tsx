@@ -6,9 +6,10 @@ interface CardProps {
   heading: string;
   body: string;
   color: string;
+  headingColor?: string
 }
 
-const Card: FC<CardProps> = ({ image, heading, body, color }) => {
+const Card: FC<CardProps> = ({ image, heading, body, color, headingColor }) => {
   const divClass = `${color} rounded-3xl pt-9 px-9 md:pt-8 md:px-8 pb-8 w-full text-black text-start`;
   return (
     <div className={divClass}>
@@ -21,7 +22,7 @@ const Card: FC<CardProps> = ({ image, heading, body, color }) => {
       )}
       <div>
         {heading && (
-          <h2 className="pb-8 font-medium tetx-5 md:text-3 text-purple-100">
+          <h2 className={`pb-8 font-medium tetx-5 md:text-3 ${headingColor ? headingColor : "text-purple-100"}`}>
             {heading}
           </h2>
         )}
