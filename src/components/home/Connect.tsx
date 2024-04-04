@@ -6,8 +6,8 @@ const Connect: React.FC = () => {
   return (
     <div className="pt-4 md:pt-1">
       <div className="flex flex-col md:flex-row text-start items-center justify-between gap-7">
-        <div className="md:max-w-[50%]">
-          <strong className="text-3">
+        <div className="md:max-w-[50%] font-neue">
+          <strong className="text-3 ">
             Connecting, Empowering and Impacting the next generation of{" "}
             <span className="text-purple-100"> tech innovators.</span>
           </strong>
@@ -26,8 +26,8 @@ const Connect: React.FC = () => {
         />
       </div>
       <div>
-        <section className="flex flex-col md:flex-row items-center gap-8 ">
-          <div className="flex flex-row gap-8 pt-7">
+        <section className="flex flex-col md:flex-row items-center gap-8 pt-7">
+          <div className="flex flex-row gap-8">
             <div className="flex flex-row items-center gap-9">
               <p className="text-4 md:text-3 font-extrabold text-gray-900">
                 1000+
