@@ -14,7 +14,7 @@ const splitNumbers = (param: number|string) => {
   }  
   return String(param).split("");
 }
-console.log(splitNumbers(22));
+
 const Countdown = () => {
   const [countDown, setCountDown] = useState<Countdown>({
     daysLeft: "00",

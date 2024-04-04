@@ -3,7 +3,6 @@ import React from 'react'
 import upcomingEvent from "../../assets/home/seriesE.jpg"
 import Countdown from './Countdown'
 import Card from '../common/Card'
-import card1 from "../../assets/home/card1.png"
 
 const UpcomingEvent = () => {
   return (
