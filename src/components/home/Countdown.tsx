@@ -1,70 +1,62 @@
 import { useEffect, useState } from "react";
 import Button from "../common/Button";
+import countdown from "@/functions/countdown";
 
+interface Countdown {
+  daysLeft: string | number;
+  hoursLeft: string | number;
+  minutesLeft: string | number;
+}
+const countdownStyles = "text-orange-100 py-[12px] mx-[5px] px-[6px] md:px-[12px] text-center text-4 md:text-2 font-bigshoulder rounded-[8px]"
+const splitNumbers = (param: number|string) => {
+  if (typeof param === "number" && param < 10) {
+    return `0${param}`
+  }  
+  return String(param).split("");
+}
+console.log(splitNumbers(22));
 const Countdown = () => {
-  const [countDown, setCountDown] = useState<[] | string[]>([]);
-
+  const [countDown, setCountDown] = useState<Countdown>({
+    daysLeft: "00",
+    hoursLeft: "00",
+    minutesLeft: "00"
+  });
+  
   useEffect(() => {
     const interval = setInterval(() => {
-      const eventDate = new Date("2024-04-27 13:00"); // create a new date object of the event date
-      const today = new Date(); // get today's date
-      const diff = eventDate.getTime() - today.getTime(); // get the difference betwween the event date and today's date in milliseconds
-      const timeLeft = {
-        // Define the timeLeft object with keys representing time units (days, hours, minutes, seconds) and their corresponding values
-        //If the condition diff > 0 is true, this expression calculates the number of the time unit(days, hours, minutes, seconds) by dividing the time difference (in milliseconds) by the number of milliseconds in a day (1000 * 60 * 60 * 24), and then taking the floor value to get the integer number of days.
-        days: diff > 0 ? Math.floor(diff / (1000 * 60 * 60 * 24)) : 0,
-        hours: diff > 0 ? Math.floor((diff / (1000 * 60 * 60)) % 24) : 0,
-        minutes: diff > 0 ? Math.floor((diff / 1000 / 60) % 60) : 0,
-        // seconds: diff > 0 ? Math.floor((diff / 1000) % 60) : 0,
-      };
-      const arr = Object.values(timeLeft).reduce(
-        // Reduce the values of the timeLeft object to an array
-        (acc: string[], val: number | string) => {
-          // const value = String(val).length < 2 ? "0" + String(val) : String(val) // check if the current value's length is greater than 1, then use it string value else add prefix 0 => 01
-          // const paddedVal = typeof val === 'number' && index > 1 && val < 10 ? String(val).padStart(2, '0') : val; // Convert single-digit numbers to two-digit format by padding with leading zero
-          acc.push(String(val)); // push the new value to accumulator array
-          // if (index !== array.length - 1) { // add ":" after the current value if it is not the the last item in the reduced array
-          //   acc.push(":");
-          // }
-          return acc; // return the new array
-        },
-        []
-      );
-      setCountDown(arr); // set Countdown value to the reduced array
+      const arr = countdown();
+      setCountDown(arr);
     }, 1000);
-
+    
     return () => clearInterval(interval);
   }, []);
-  // .join(" ").replace(/ /g, ":").split("")
+  const numOfDaysVal1 = splitNumbers(countDown.daysLeft)[0]; 
+  const numOfDaysVal2 = splitNumbers(countDown.daysLeft)[1];
+  const numOfHoursVal1 = splitNumbers(countDown.hoursLeft)[0];
+  const numOfHoursVal2 = splitNumbers(countDown.hoursLeft)[1];
+  const numOfMinsVal1 = splitNumbers(countDown.minutesLeft)[0];
+  const numOfMinsVal2 = splitNumbers(countDown.minutesLeft)[1];
 
   return (
-    <div className=" text-left bg-red-5 w-[100%] ">
+    <section className=" text-left bg-red-5 w-[100%] ">
       <div
         style={{ backgroundColor: "#fff" }}
-        className=" py-[24px] px-[2rem] md:px-[24px] w-[100%] md:w-[max-content] rounded-[1rem] "
-      >
-        <p className=" text-[#FA8A1A] text-4 text-center md:text-left pb-9 ">
+        className=" py-8 px-7 md:px-8 w-[100%] md:w-[max-content] rounded-[16px] ">
+        <p className=" text-orange-100 text-4 text-center md:text-left pb-9 ">
           Series E
         </p>
-        <div className="m-auto">
-          {countDown.length &&
-            countDown
-              .join(" ")
-              .replace(/ /g, ":")
-              .split("")
-              .map((char: string | number, index: number) => (
-                <span
-                  key={index}
-                  className={` ${
-                    char !== ":" ? "bg-[#FFF4E9]" : ""
-                  } text-[#FA8A1A] py-[12px] mx-[5px] px-[6px] md:px-[12px] text-center text-4 md:text-2 font-bigshoulder rounded-[8px]`}
-                >
-                  {char}
-                </span>
-              ))}
+        <div className="m-auto flex items-center justify-center ">
+          <p className={`${countdownStyles}  bg-orange-20`}>{numOfDaysVal1}</p>
+          <p className={`${countdownStyles}  bg-orange-20`}>{numOfDaysVal2}</p>
+          <p className={`${countdownStyles}`}>:</p>
+          <p className={`${countdownStyles}  bg-orange-20`}>{numOfHoursVal1}</p>
+          <p className={`${countdownStyles}  bg-orange-20`}>{numOfHoursVal2}</p>
+          <p className={`${countdownStyles}`}>:</p>
+          <p className={`${countdownStyles}  bg-orange-20`}>{numOfMinsVal1}</p>
+          <p className={`${countdownStyles}  bg-orange-20`}>{numOfMinsVal2}</p>
         </div>
       </div>
-      <p className="text-white w-[70%] text-[1.15rem] my-[1rem] ">
+      <p className="text-white md:w-[70%] text-[1.15rem] my-[1rem] ">
         Ignite your creativity and learn from visionary speakers shaping the
         future.
         <br />
@@ -74,14 +66,14 @@ const Countdown = () => {
         <a href="https://bit.ly/YPITseriesE" target="_blank">
           <Button
             text="Save a spot now!"
-            className="bg-white border-black-100 text-black-100 text-6"
+            className="bg-white border-black-100 text-black-100 text-9 md:text-6"
           />
         </a>
         <a href="/events">
-          <Button text="Check out other events" noIcon transparent />
+          <Button text="Check out other events" noIcon transparent className="text-9 md:text-6" />
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 
