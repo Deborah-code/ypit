@@ -66,7 +66,9 @@ const Countdown = () => {
         <a href="https://bit.ly/YPITseriesE" target="_blank">
           <Button
             text="Save a spot now!"
-            className="bg-white border-black-100 text-black-100 text-9 md:text-6"
+            className="bg-white text-black-100 text-9 md:text-6"
+            borderColor="border-black-100"
+            textColor= "text-black-100"
           />
         </a>
         <a href="/events">
