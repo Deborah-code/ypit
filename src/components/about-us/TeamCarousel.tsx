@@ -1,39 +1,15 @@
-import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import "swiper/css";
 import { Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Daniel from "../../assets/aboutUs/daniel.jpg";
 import Deborah from "../../assets/aboutUs/deborah.jpg";
+import Biola from "../../assets/aboutUs/diji.jpg";
 import Dorcas from "../../assets/aboutUs/dorcas.jpg";
 import Tobi from "../../assets/aboutUs/tobi.jpg";
+import ImageCard, { CardProps } from "../common/ImageCard";
 
-import Biola from "../../assets/aboutUs/diji.jpg";
-
-interface TeamProps {
-  image: HTMLImageElement | string | StaticImageData;
-  name: string;
-  role: string;
-}
-const TeamCard: React.FC<TeamProps> = ({ image, name, role }) => {
-  return (
-    <div className="relative rounded-lg overflow-hidden">
-      <Image
-        src={image}
-        alt={name}
-        className="rounded-lg w-[272px] md:w-[409px]  h-[308px] md:h-[500px]"
-      />
-      <div className="w-[100%] absolute bottom-0 rounded-lg">
-        <div className=" bg-gradient-to-b from-transparent via-black-30/70 to-black-100 p-9">
-          <h3 className="text-white text-4">{name}</h3>
-          <p className="text-yellow-100 text-6">{role}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const members: TeamProps[] = [
+const members: CardProps[] = [
   {
     name: "Tobi Aromire",
     role: "Captain of the Ship",
@@ -72,7 +48,7 @@ const TeamCarousel: React.FC = () => {
       <Swiper
         slidesPerView={1.65}
         keyboard={true}
-        spaceBetween={30}
+        spaceBetween={100}
         mousewheel={{
           forceToAxis: true,
           releaseOnEdges: true,
@@ -94,7 +70,7 @@ const TeamCarousel: React.FC = () => {
       >
         {members.map((member, index) => (
           <SwiperSlide key={index}>
-            <TeamCard
+            <ImageCard
               name={member.name}
               image={member.image}
               role={member.role}
