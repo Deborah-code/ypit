@@ -25,6 +25,10 @@ const config: Config = {
             50: '#626262',
             30: '#ADADAD',
           },
+          orange: {
+            100: "#FA8A1A",
+            20: "#FFF4E9"
+          },
           white: '#FFFFFF',
           green: 'rgba(49, 255, 142, 0.15)'
           
@@ -57,12 +61,10 @@ const config: Config = {
           '8': '24px',
           '9': '16px',
         },
-
         fontFamily: {
-          // add the css variable and include fallback fonts from tailwind default theme
           sans: ['var(--font-sans)', ...fontFamily.sans],
-          bigshoulder: ['var(--font-big-shoulder)', ...fontFamily.sans],
-          neue: ['var(--font-neue)', ...fontFamily.sans],
+          bigshoulder: ["var(--font-big-shoulders-display)"],
+          neue: ['var(--font-neue)'],
         },
       },
   },

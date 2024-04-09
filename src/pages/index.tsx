@@ -5,10 +5,12 @@ import Connect from "@/components/home/Connect";
 import Image from "next/image";
 import HeroCollage from "../assets/home/ypit-hero-collage.png";
 import Carousel from "../components/home/TestimonialCarousel";
+import UpcomingEvent from "@/components/home/UpcomingEvent";
+
 export default function Home() {
   return (
     <>
-      <h1 className="text-3 md:text-2 pt-3 md:pt-1">
+      <h1 className="text-3 md:text-2 pt-3 md:pt-1 font-bigshoulder">
         Creating a Space for Young People In Tech to{" "}
         <span className="bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text">
           Connect and&nbsp;Grow
@@ -32,6 +34,7 @@ export default function Home() {
       <CardSection />
       <Carousel />
       <Partners />
+      <UpcomingEvent />
     </>
   );
 }
