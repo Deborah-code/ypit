@@ -60,7 +60,13 @@ const Series: React.FC<Props> = ({ img1, img2, img3, title, date, link }) => {
         </h2>
         <p className="text-5 font-[400] text-black-50 mb-8">{date}</p>
         <a href={`${link}`} target="_blank">
-          <Button text="View Album" />
+          <Button
+            text="View album"
+            className="text-black-100 text-9 md:text-6"
+            borderColor="border-orange-100 bg-orange-20"
+            textColor="text-black-100"
+            bgColor="bg-orange-20"
+          />{" "}
         </a>
       </div>
     </div>

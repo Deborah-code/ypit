@@ -17,7 +17,9 @@ const ImageCard: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`relative rounded-lg overflow-hidden  w-[272px] md:w-[409px] h-[308px] md:h-[500px] mb-[16px] ${width} ${height} `}
+      className={`relative rounded-lg overflow-hidden ${
+        width ? width : "w-[272px] md:w-[409px]"
+      } ${height ? height : "h-[308px] md:h-[500px]"}   mb-[16px] `}
     >
       <Image src={image} alt={name} objectFit="cover" className="h-full" />
       <div className="w-[100%] absolute bottom-0 rounded-lg">

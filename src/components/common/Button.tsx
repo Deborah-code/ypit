@@ -9,7 +9,8 @@ interface ButtonProps {
   transparent?: boolean;
   className?: string;
   borderColor?: string;
-  textColor?: string
+  textColor?: string;
+  bgColor?: string;
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -19,14 +20,20 @@ const Button: FC<ButtonProps> = (props) => {
         className={` ${
           props.transparent
             ? "bg-[transparent] border-white"
-            : `${props.className} bg-purple-20 ${props.borderColor? props.borderColor : "border-purple-100"}`
+            : `${props.bgColor ? props.bgColor : "bg-purple-20"}  ${
+                props.borderColor ? props.borderColor : "border-purple-100"
+              } ${props.className} `
         } py-[8px] px-[8px] md:px-[20px]  border-solid border-2 rounded-[41px] `}
         onClick={() => props.onClick && props.onClick()}
       >
         <div className="flex items-center gap-[8px]">
           <p
             className={`${
-              props.transparent ? "text-white" : props.textColor ? props.textColor : "text-purple-100"
+              props.transparent
+                ? "text-white"
+                : props.textColor
+                ? props.textColor
+                : "text-purple-100"
             }  md:text-6}`}
           >
             {props.text}
@@ -38,7 +45,7 @@ const Button: FC<ButtonProps> = (props) => {
           ) : (
             <Icon
               icon="iconoir:arrow-tr"
-              color={props.textColor ? "#000000" :"#5100bf"}
+              color={props.textColor ? "#000000" : "#5100bf"}
               width="16"
               height="16"
             />

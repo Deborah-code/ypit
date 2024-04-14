@@ -8,7 +8,7 @@ import zoropay from "../assets/commons/zoropay.png";
 export interface Partners {
   name: string;
   image: HTMLImageElement | string | StaticImageData;
-  className?: string;
+  className: string;
   style?: CSSProperties;
 }
 
@@ -26,7 +26,7 @@ export const PartnersData: Partners[] = [
   {
     name: "PaymentLogue",
     image: paymentLogue,
-    className: "w-[77px] h-[29px] md:w-[211px] md:h-[50px]",
+    className: "w-[59px] h-[29px] md:w-[211px] md:h-[50px]",
   },
   {
     name: "TechBabble",

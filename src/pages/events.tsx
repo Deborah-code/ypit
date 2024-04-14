@@ -1,19 +1,18 @@
 import Partners from "@/components/common/Partners";
+import Banner from "@/components/events/Banner";
 import Highlights from "@/components/events/Highlights";
 import Series from "@/components/events/Series";
-import Speakers from "@/components/events/Speakers";
 import Image from "next/image";
 import { useState } from "react";
-import location from "../assets/events/location.svg";
-import seriesA2 from "../assets/events/seriesA/2.jpg";
-import seriesA3 from "../assets/events/seriesA/3.jpg";
-import seriesA4 from "../assets/events/seriesA/4.jpg";
 import seriesB2 from "../assets/events/seriesB/2.jpg";
 import seriesB5 from "../assets/events/seriesB/3.jpg";
 import seriesB3 from "../assets/events/seriesB/4.jpg";
 import seriesC2 from "../assets/events/seriesC/2.jpg";
 import seriesC4 from "../assets/events/seriesC/4.jpg";
 import seriesC5 from "../assets/events/seriesC/5.jpg";
+import seriesD1 from "../assets/events/seriesD/1.jpeg";
+import seriesD2 from "../assets/events/seriesD/2.jpeg";
+import seriesD3 from "../assets/events/seriesD/3.jpeg";
 import seriesE from "../assets/events/seriesE.png";
 import Button from "../components/common/Button";
 import JoinCommunity from "../components/common/JoinCommunity";
@@ -22,9 +21,6 @@ import Modal from "../components/common/Modal";
 const Events = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
-  // const handleMenuClick = () => {
-  //   setShowModal(!showModal);
-  // };
   return (
     <main>
       <>
@@ -33,22 +29,28 @@ const Events = () => {
             Series E<span className="text-black-100">-</span>
           </h1>
           <h1 className="text-4 md:text-1 pb-8 md:inline">
-            Our Biggest Tech Event Yet
+            Our first event in 2024
           </h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
-            YPIT Series D was the latest installation of our community events,
-            where we hosted young people in Nigeria&apos;s tech ecosystem to
-            come and have a day of fun, learning, and networking on us.
+            YPIT's Series E event is the latest installation of our community
+            events, where we&apos;ll host young people in Nigeria&apos;s tech
+            ecosystem to come and have a day of fun, learning, and networking on
+            us. It&apos;s also the first one we&apos;ll be having on the
+            mainland
           </p>
           <div className="pt-8">
             <div className="flex items-center justify-center gap-[32px]">
-              <Button
-                globeButton
-                text="Save a spot now!"
-                // onClick={handleMenuClick}
-              />
+              <a href="https://bit.ly/YPITseriesE" target="_blank">
+                <Button
+                  text="Save a spot now!"
+                  className="text-black-100 text-9 md:text-6"
+                  borderColor="border-orange-100 bg-orange-20"
+                  textColor="text-black-100"
+                  bgColor="bg-orange-20"
+                />
+              </a>
               <a href="mailto:hello@someoneintech.com" target="_blank">
-                <p className="text-purple-100 underline">Become a sponsor</p>
+                <p className="text-orange-100 underline">Become a sponsor</p>
               </a>
             </div>
             {showModal && (
@@ -65,50 +67,23 @@ const Events = () => {
             <Image
               src={seriesE}
               alt="Series-E Flyer"
-              className="max-w-[100%] md:max-w-[1404px] mt-[32px] md:mt-[64px] h-full w-[100%]"
+              className="max-w-[85%] mx-auto mt-[32px] md:mt-[64px] h-full w-[100%]"
               objectFit="contain"
             />
-            <Image className="w-full" alt="Time and Location" src={location} />
+            <Banner />
           </section>
-          <Speakers />
-          {/* <div className=" md:flex md:gap-[12px] md:px-32 md:max-h-[720px] h-full"> */}
-          {/* <div>
-              <Image
-                className=" h-[100%] w-[340] md:w-[758px]"
-                alt="founders image"
-                src={founder1}
-              />
-            </div> */}
-          {/* <div className="flex flex-col md:flex md:flex-col md:gap-[7px] md:pt-20">
-              <div className="flex flex-col md:flex-row md:flex md:gap-[10px]">
-                <Image
-                  className="w-[369px] h-[340px]"
-                  src={founder2}
-                  alt="speaker 2"
-                />
-                <Image
-                  className="w-[369px] h-[340px]"
-                  src={founder3}
-                  alt="speaker 3"
-                />
-              </div>
-              <div className="  md:flex md:gap-[10px]">
-                <Image
-                  className="w-[369px] h-[340px]"
-                  src={founder4}
-                  alt="speaker 4"
-                />
-                <Image
-                  className="w-[369px] h-[340px]"
-                  src={founder5}
-                  alt="speaker 5"
-                />
-              </div>
-            </div> */}
-          {/* </div> */}
+          {/* <Speakers /> */}
         </section>
         <Highlights />
         <div className="flex flex-col md:flex-row justify-evenly gap-8 md:pt-1">
+          <Series
+            title="D"
+            date="2nd December 2023"
+            img3={seriesD3}
+            img2={seriesD1}
+            img1={seriesD2}
+            link="https://youngpeopleintech.pixieset.com/ypitseriesd/"
+          />
           <Series
             title="C"
             date="29th April 2023"
@@ -124,14 +99,6 @@ const Events = () => {
             img1={seriesB2}
             img3={seriesB5}
             link="https://youngpeopleintech.pixieset.com/ypitseriesb/"
-          />
-          <Series
-            title="A"
-            date="22nd January 2022"
-            img3={seriesA2}
-            img2={seriesA3}
-            img1={seriesA4}
-            link="https://youngpeopleintech.pixieset.com/ypitseriesa/"
           />
         </div>
         <Partners />
