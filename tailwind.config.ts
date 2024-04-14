@@ -25,6 +25,10 @@ const config: Config = {
             50: '#626262',
             30: '#ADADAD',
           },
+          orange: {
+            100: "#FA8A1A",
+            20: "#FFF4E9"
+          },
           white: '#FFFFFF',
           green: 'rgba(49, 255, 142, 0.15)'
           
