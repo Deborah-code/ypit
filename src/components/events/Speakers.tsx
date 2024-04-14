@@ -1,37 +1,9 @@
 import Daniel from "../../assets/aboutUs/daniel.jpg";
 import Deborah from "../../assets/aboutUs/deborah.jpg";
-import Biola from "../../assets/aboutUs/diji.jpg";
 import Dorcas from "../../assets/aboutUs/dorcas.jpg";
 import Tobi from "../../assets/aboutUs/tobi.jpg";
-import ImageCard, { CardProps } from "../common/ImageCard";
+import ImageCard from "../common/ImageCard";
 
-const members: CardProps[] = [
-  {
-    name: "Tobi Aromire",
-    role: "Captain of the Ship",
-    image: Tobi,
-  },
-  {
-    name: "Deborah Adewunmi",
-    image: Deborah,
-    role: "Leader of the Tech  pack",
-  },
-  {
-    name: "Abiola Oladiji",
-    image: Biola,
-    role: "Brand Alchemist",
-  },
-  {
-    name: "Dorcas Adewunmi",
-    image: Dorcas,
-    role: "Specialist Project Ninja",
-  },
-  {
-    name: "Daniel Adewunmi",
-    image: Daniel,
-    role: "Director of Wordplay and Punnery",
-  },
-];
 const Speakers = () => {
   return (
     <main className="m-auto max-w-[320px] md:max-w-[96%]">

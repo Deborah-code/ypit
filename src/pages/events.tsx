@@ -32,11 +32,11 @@ const Events = () => {
             Our first event in 2024
           </h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
-            YPIT's Series E event is the latest installation of our community
-            events, where we&apos;ll host young people in Nigeria&apos;s tech
-            ecosystem to come and have a day of fun, learning, and networking on
-            us. It&apos;s also the first one we&apos;ll be having on the
-            mainland
+            YPIT&apos;s Series E event is the latest installation of our
+            community events, where we&apos;ll host young people in
+            Nigeria&apos;s tech ecosystem to come and have a day of fun,
+            learning, and networking on us. It&apos;s also the first one
+            we&apos;ll be having on the mainland
           </p>
           <div className="pt-8">
             <div className="flex items-center justify-center gap-[32px]">
