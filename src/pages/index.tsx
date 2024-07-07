@@ -5,7 +5,6 @@ import Connect from "@/components/home/Connect";
 import Image from "next/image";
 import HeroCollage from "../assets/home/ypit-hero-collage.png";
 import Carousel from "../components/home/TestimonialCarousel";
-import UpcomingEvent from "@/components/home/UpcomingEvent";
 
 export default function Home() {
   return (
@@ -34,7 +33,6 @@ export default function Home() {
       <CardSection />
       <Carousel />
       <Partners />
-      <UpcomingEvent />
     </>
   );
 }
