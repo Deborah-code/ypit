@@ -1,18 +1,17 @@
 import Partners from "@/components/common/Partners";
-import Banner from "@/components/events/Banner";
 import Highlights from "@/components/events/Highlights";
 import Series from "@/components/events/Series";
 import Image from "next/image";
 import { useState } from "react";
-import seriesB2 from "../assets/events/seriesB/2.jpg";
-import seriesB5 from "../assets/events/seriesB/3.jpg";
-import seriesB3 from "../assets/events/seriesB/4.jpg";
 import seriesC2 from "../assets/events/seriesC/2.jpg";
 import seriesC4 from "../assets/events/seriesC/4.jpg";
 import seriesC5 from "../assets/events/seriesC/5.jpg";
 import seriesD1 from "../assets/events/seriesD/1.jpeg";
 import seriesD2 from "../assets/events/seriesD/2.jpeg";
 import seriesD3 from "../assets/events/seriesD/3.jpeg";
+import seriesE1 from "../assets/events/seriesE/1.jpeg";
+import seriesE2 from "../assets/events/seriesE/2.jpeg";
+import seriesE3 from "../assets/events/seriesE/3.jpeg";
 import seriesE from "../assets/events/seriesE.png";
 import Button from "../components/common/Button";
 import JoinCommunity from "../components/common/JoinCommunity";
@@ -44,13 +43,13 @@ const Events = () => {
                 <Button
                   text="Save a spot now!"
                   className="text-black-100 text-9 md:text-6"
-                  borderColor="border-orange-100 bg-orange-20"
+                  borderColor="border-purple-100 bg-purple-20"
                   textColor="text-black-100"
                   bgColor="bg-orange-20"
                 />
               </a>
               <a href="mailto:hello@someoneintech.com" target="_blank">
-                <p className="text-orange-100 underline">Become a sponsor</p>
+                <p className="text-purple-100 underline">Become a sponsor</p>
               </a>
             </div>
             {showModal && (
@@ -70,12 +69,20 @@ const Events = () => {
               className="max-w-[85%] mx-auto mt-[32px] md:mt-[64px] h-full w-[100%]"
               objectFit="contain"
             />
-            <Banner />
+            {/*<Banner />*/}
           </section>
           {/* <Speakers /> */}
         </section>
         <Highlights />
         <div className="flex flex-col md:flex-row justify-evenly gap-8 md:pt-1">
+        <Series
+            title="E"
+            date="27th April 2024"
+            img3={seriesE3}
+            img2={seriesE2}
+            img1={seriesE1}
+            link="https://youngpeopleintech.pixieset.com/ypitseriese/"
+          />
           <Series
             title="D"
             date="2nd December 2023"
@@ -91,14 +98,6 @@ const Events = () => {
             img2={seriesC2}
             img3={seriesC5}
             link="https://youngpeopleintech.pixieset.com/ypitseriesc/"
-          />
-          <Series
-            title="B"
-            date="27th Aug 2022"
-            img2={seriesB3}
-            img1={seriesB2}
-            img3={seriesB5}
-            link="https://youngpeopleintech.pixieset.com/ypitseriesb/"
           />
         </div>
         <Partners />
