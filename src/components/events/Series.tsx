@@ -63,9 +63,9 @@ const Series: React.FC<Props> = ({ img1, img2, img3, title, date, link }) => {
           <Button
             text="View album"
             className="text-black-100 text-9 md:text-6"
-            borderColor="border-orange-100 bg-orange-20"
+            borderColor="border-purple-100 bg-purple-20"
             textColor="text-black-100"
-            bgColor="bg-orange-20"
+            bgColor="bg-purple-20"
           />{" "}
         </a>
       </div>
