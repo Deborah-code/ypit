@@ -24,10 +24,11 @@ const Blog = () => {
         from Young Minds in Tech
       </p>
       <div
+        data-testid="substack-feed-embed"
         id="substack-feed-embed"
         className="text-start md:max-w-[70%] m-auto"
       ></div>
-      <Script id="substack-feed-script">
+      <Script data-testid="substack-feed-script" id="substack-feed-script">
         {`
                     window.SubstackFeedWidget = {
                         substackUrl: "someoneintech.substack.com",
