@@ -12,16 +12,18 @@ describe("Blog post", () => {
   });
 
   // Renders the P Element and in blog.tsx file
-  // Also using within since the span element was nested into the P Element
   it("renders the blog post pElement", () => {
     render(<Blog />);
 
     const pElement = screen.getByText(/Navigating the Future -/);
     expect(pElement).toBeInTheDocument();
+  });
 
-    const spanElement = within(pElement).getByText(
-      "Insights, Stories, and Innovations"
-    );
+  // Renders the Span Element nested into P Element
+  it("renders the blog post spanElement", () => {
+    render(<Blog />);
+
+    const spanElement = screen.getByText(/Insights, Stories, and Innovations/);
     expect(spanElement).toBeInTheDocument();
   });
 
