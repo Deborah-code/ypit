@@ -26,8 +26,9 @@ const Blog = () => {
       <div
         id="substack-feed-embed"
         className="text-start md:max-w-[70%] m-auto"
+        data-testid="substack-feed-embed"
       ></div>
-      <Script id="substack-feed-script">
+      <Script id="substack-feed-script" data-testid="substack-feed-script">
         {`
                     window.SubstackFeedWidget = {
                         substackUrl: "someoneintech.substack.com",

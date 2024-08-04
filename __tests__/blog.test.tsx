@@ -1,24 +1,28 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Blog from "@/pages/blog";
 
-it("should have head", () => {
-  render(<Blog />);
+describe("Blog post", () => {
+  // Renders the H1 Element in blog.tsx file
+  it("should have head", () => {
+    render(<Blog />);
 
     const h1Element = screen.getByText("TechTrailblazers");
     expect(h1Element).toBeInTheDocument();
   });
 
   // Renders the P Element and in blog.tsx file
-  // Also using within since the span element was nested into the P Element
   it("renders the blog post pElement", () => {
     render(<Blog />);
 
     const pElement = screen.getByText(/Navigating the Future -/);
     expect(pElement).toBeInTheDocument();
+  });
 
-    const spanElement = within(pElement).getByText(
-      "Insights, Stories, and Innovations"
-    );
+  // Renders the Span Element nested into P Element
+  it("renders the blog post spanElement", () => {
+    render(<Blog />);
+
+    const spanElement = screen.getByText(/Insights, Stories, and Innovations/);
     expect(spanElement).toBeInTheDocument();
   });
 
