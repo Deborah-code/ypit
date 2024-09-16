@@ -24,18 +24,15 @@ SwiperCore.use([Autoplay, Parallax]);
 const Partners = () => {
   const partners = PartnersData;
   const swiperRef = React.useRef<SwiperCore>();
-  const [hover, onHover] = React.useState<boolean>(false);
 
   const onInit = (Swiper: SwiperCore): void => {
     swiperRef.current = Swiper;
   };
 
   const handleMouseEnter = () => {
-    onHover(true);
     if (swiperRef.current) swiperRef.current.autoplay.start();
   };
   const handleMouseLeave = () => {
-    onHover(false);
     if (swiperRef.current) swiperRef.current.autoplay.stop();
   };
 
@@ -51,14 +48,13 @@ const Partners = () => {
       >
         <Swiper {...SwiperConfig} onInit={onInit}>
           {partners.map((partner, index) => (
-            <SwiperSlide style={{ marginLeft: "2rem" }}>
+            <SwiperSlide style={{ marginLeft: "2rem" }} key={index}>
               <Image
-                key={index}
                 src={partner.image}
                 alt={partner.name}
                 objectFit="contain"
                 className={partner.className}
-                style={{ maxHeight: "5rem", maxWidth: "8rem" }}
+                style={{ maxHeight: "6rem", maxWidth: "10rem" }}
               />
             </SwiperSlide>
           ))}
