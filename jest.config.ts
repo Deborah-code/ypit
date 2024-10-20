@@ -11,7 +11,7 @@ const config: Config = {
   coverageProvider: 'v8',
   testEnvironment: 'jsdom',
   // Add more setup options before each test is run
-  setupFilesAfterEnv: ['/Users/deborahadewunmi/Desktop/ypit/jest.setup.ts'],
+  setupFilesAfterEnv: ['C:/Users/Mubarak Yahaya/Desktop/Project/Open Source/ypit/jest.setup.ts'],
 }
  
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
