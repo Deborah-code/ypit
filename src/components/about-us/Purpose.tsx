@@ -21,7 +21,7 @@ const cardDetails: CardDetails[] = [
   {
     icon: missionIcon,
     heading: "Mission",
-    text: `The community's mission is to foster connections among young individuals in the field of technology across Africa 
+    text: `The community's mission is to foster connections among young individuals in the field of technology globally 
         through the utilisation of physical events, virtual events, and targeted communication.`,
     image: missionImage,
     flexDirection: "flex-row",
@@ -30,7 +30,7 @@ const cardDetails: CardDetails[] = [
     icon: visionIcon,
     heading: "Vision",
     text: `The community envisions becoming a thriving environment that fosters growth and development through networking for aspiring 
-        and fledgling technologically interested individuals across Africa`,
+        and fledgling technologically interested individuals globally`,
     image: visionImage,
     flexDirection: "flex-row-reverse",
   },
