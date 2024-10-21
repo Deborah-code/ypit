@@ -1,7 +1,6 @@
 import Partners from "@/components/common/Partners";
 import Highlights from "@/components/events/Highlights";
 import Series from "@/components/events/Series";
-import Image from "next/image";
 import { useState } from "react";
 import seriesC2 from "../assets/events/seriesC/2.jpg";
 import seriesC4 from "../assets/events/seriesC/4.jpg";
@@ -12,7 +11,6 @@ import seriesD3 from "../assets/events/seriesD/3.jpeg";
 import seriesE1 from "../assets/events/seriesE/1.jpeg";
 import seriesE2 from "../assets/events/seriesE/2.jpeg";
 import seriesE3 from "../assets/events/seriesE/3.jpeg";
-import seriesE from "../assets/events/seriesE.png";
 import Button from "../components/common/Button";
 import JoinCommunity from "../components/common/JoinCommunity";
 import Modal from "../components/common/Modal";
@@ -25,10 +23,10 @@ const Events = () => {
       <>
         <section className=" pt-5 md:pt-1">
           <h1 className="text-3 md:text-1 bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text">
-            Series E<span className="text-black-100">-</span>
+            Series F <span className="text-black-100">-</span>
           </h1>
           <h1 className="text-4 md:text-1 pb-8 md:inline">
-            Our first event in 2024
+            Our next event in 2024
           </h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
             YPIT&apos;s Series E event is the latest installation of our
@@ -63,19 +61,19 @@ const Events = () => {
             )}
           </div>
           <section className="max-w-[34%] md:max-w-[100%] m-auto h-full">
-            <Image
+            {/* <Image
               src={seriesE}
               alt="Series-E Flyer"
               className="max-w-[85%] mx-auto mt-[32px] md:mt-[64px] h-full w-[100%]"
               objectFit="contain"
-            />
+            /> */}
             {/*<Banner />*/}
           </section>
           {/* <Speakers /> */}
         </section>
         <Highlights />
         <div className="flex flex-col md:flex-row justify-evenly gap-8 md:pt-1">
-        <Series
+          <Series
             title="E"
             date="27th April 2024"
             img3={seriesE3}
