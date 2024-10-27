@@ -46,19 +46,18 @@ const Partners = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Swiper {...SwiperConfig} onInit={onInit}>
-          {partners.map((partner, index) => (
-            <SwiperSlide style={{ marginLeft: "2rem" }} key={index}>
-              <Image
-                src={partner.image}
-                alt={partner.name}
-                objectFit="contain"
-                className={partner.className}
-                style={{ maxHeight: "6rem", maxWidth: "10rem" }}
-              />
-            </SwiperSlide>
+        <div className="flex flex-row justify-center items-center gap-[24px] md:gap-[56px] px-[18px]">
+          {
+            partners.map((partner, index) => (
+            <Image
+            src={partner.image}
+            alt={partner.name}
+            objectFit="contain"
+            className={partner.className}
+            style={{ maxHeight: "6rem", maxWidth: "10rem" }}
+            />
           ))}
-        </Swiper>
+        </div>
       </div>
     </div>
   );
