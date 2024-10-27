@@ -9,7 +9,6 @@ SwiperCore.use([Autoplay, Parallax]);
 
 const Partners = () => {
   const partners = PartnersData;
-  const swiperRef = React.useRef<SwiperCore>();
 
   return (
     <div>
@@ -23,6 +22,7 @@ const Partners = () => {
           {
             partners.map((partner, index) => (
             <Image
+            key={index}
             src={partner.image}
             alt={partner.name}
             objectFit="contain"
