@@ -38,7 +38,7 @@ const Connect: React.FC = () => {
             </div>
             <div className="flex flex-row items-center gap-9">
               <p className="text-4 md:text-3 font-extrabold text-gray-900">
-                5+
+                7+
               </p>
               <p className="text-base text-gray-500 text-start">
                 Community <br /> Events

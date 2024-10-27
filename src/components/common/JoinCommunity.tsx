@@ -14,8 +14,7 @@ const JoinCommunity: React.FC = () => {
         </span>
       </h1>
       <p className="pb-[61px]">
-        Join over +1000 young tech professionals ready to network, learn and
-        grow
+        Join over 3000 young tech professionals ready to network, learn and grow
       </p>
       <div className="flex flex-col md:flex-col-reverse gap-[69px]">
         <section className="flex flex-row justify-between items-center gap-[18px] bg-purple-20 rounded-[41px] p-[8px] md:p-[16px]">

@@ -3,8 +3,11 @@ import { CSSProperties } from "react";
 import bounce from "../assets/commons/bounce.png";
 import greenCamp from "../assets/commons/greenCamp.png";
 import paymentLogue from "../assets/commons/paymentLogue.png";
+import productDive from "../assets/commons/productDive.png";
 import techBabble from "../assets/commons/techBabble.png";
+import techCabal from "../assets/commons/techCabal.png";
 import zoropay from "../assets/commons/zoropay.png";
+
 export interface Partners {
   name: string;
   image: HTMLImageElement | string | StaticImageData;
@@ -13,6 +16,16 @@ export interface Partners {
 }
 
 export const PartnersData: Partners[] = [
+  {
+    name: "Tech Cabal",
+    image: techCabal,
+    className: "w-[59px] h-[13px] md:w-[160px] md:h-[37px]",
+  },
+  {
+    name: "Product Dive",
+    image: productDive,
+    className: "max-w-[59px] h-[13px] md:w-[10] max-w-[200px] md:h-[37px]",
+  },
   {
     name: "Zoropay",
     image: zoropay,

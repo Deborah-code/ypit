@@ -13,7 +13,7 @@ import highlight9 from "../../assets/events/highlight9.png";
 const Highlights = () => {
   return (
     <section className="w-[100%] py-[2rem]">
-      <article className="text-left pl-9 md:flex md:items-center md:justify-evenly pb-[2rem] max-w-[100vw] m-auto">
+      {/* <article className="text-left pl-9 md:flex md:items-center md:justify-evenly pb-[2rem] max-w-[100vw] m-auto">
         <h2 className="text-4 md:text-3 font-normal lg:w-[30%] mb-9 md:mb-0 ">
           Highlights from past events
         </h2>
@@ -21,7 +21,7 @@ const Highlights = () => {
           Browse our gallery, take a tour, and share in the experience of all of
           YPIT&apos;s previous events.
         </p>
-      </article>
+      </article> */}
       <article className="grid grid-cols-6 grid-rows-[100px_43px_auto] gap-[1rem] w-[1300px] ml-[-150px] md:m-auto overflow-x-scroll">
         <Image
           src={highlight1}
