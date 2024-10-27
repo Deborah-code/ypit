@@ -1,5 +1,5 @@
-import { StaticImageData } from "next/image";
-import { CSSProperties } from "react";
+import {type StaticImageData } from "next/image";
+import {type CSSProperties } from "react";
 import bounce from "../assets/commons/bounce.png";
 import greenCamp from "../assets/commons/greenCamp.png";
 import paymentLogue from "../assets/commons/paymentLogue.png";

@@ -1,5 +1,5 @@
 import { MenuData } from "@/data/menuData";
-import { socialLinks, SocialLinks } from "@/data/socialLinks";
+import { socialLinks, type SocialLinks } from "@/data/socialLinks";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
