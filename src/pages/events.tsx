@@ -29,14 +29,18 @@ const Events = () => {
             Our next event in 2024
           </h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
-            YPIT&apos;s Series F event is the next installation of our community
-            events, where we&apos;ll host young people in Nigeria&apos;s tech
-            ecosystem to come and have a day of fun, learning, and networking on
-            us. It&apos;s coming soon! sign up to get updates
+            YPIT&apos;s Series E event is the latest installation of our
+            community network events, where we&apos;ll host young people in
+            Nigeria&apos;s tech ecosystem to come and have a day of fun,
+            learning, and networking on us. It&apos;s also the first one
+            we&apos;ll be having on the mainland
           </p>
           <div className="pt-8">
             <div className="flex items-center justify-center gap-[32px]">
-              <a href="https://bit.ly/YPITseriesE" target="_blank">
+              <a
+                href="https://tally.so/r/wbrPpo?fbclid=PAZXh0bgNhZW0CMTEAAaaBqWm4FFHYBS_PT4q3iDRoNn_WO_qICJW9EEL1O9tRuBhk-YvnyE8fBfU_aem_F5bOU3kdvkV3VUetoyicFQ"
+                target="_blank"
+              >
                 <Button
                   text="Save a spot now!"
                   className="text-black-100 text-9 md:text-6"
@@ -45,7 +49,7 @@ const Events = () => {
                   bgColor="bg-orange-20"
                 />
               </a>
-              <a href="mailto:hello@someoneintech.com" target="_blank">
+              <a href="mailto:hello@youngpeopleintech.com" target="_blank">
                 <p className="text-purple-100 underline">Become a sponsor</p>
               </a>
             </div>
