@@ -16,9 +16,9 @@ const Partners = () => {
         Some of our recent partners
       </h3>
       <div
-        className="highlight-inner"
+        className="highlight-inner overflow-x-scroll"
       >
-        <div className="flex flex-row justify-center items-center gap-[24px] md:gap-[56px] px-[18px]">
+        <div className="flex items-center gap-[24px] md:gap-[36px] px-[18px]">
           {
             partners.map((partner, index) => (
             <Image
@@ -27,7 +27,7 @@ const Partners = () => {
             alt={partner.name}
             objectFit="contain"
             className={partner.className}
-            style={{ maxHeight: "6rem", maxWidth: "10rem" }}
+            style={{ ...partner.style }}
             />
           ))}
         </div>

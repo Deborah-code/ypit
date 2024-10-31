@@ -13,6 +13,7 @@ export interface Partners {
   image: HTMLImageElement | string | StaticImageData;
   className: string;
   style?: CSSProperties;
+  width?: number;
 }
 
 export const PartnersData: Partners[] = [
@@ -20,21 +21,25 @@ export const PartnersData: Partners[] = [
     name: "Tech Cabal",
     image: techCabal,
     className: "w-[59px] h-[13px] md:w-[160px] md:h-[37px]",
+    style: { width: "15rem" }
   },
   {
     name: "Product Dive",
     image: productDive,
-    className: "max-w-[59px] h-[13px] md:w-[10] max-w-[200px] md:h-[37px]",
+    className: "w-[159px] h-[0px] md:w-[10] max-w-[200px] md:h-[37px]",
+    style: { width: "15rem", height: "3rem" }
   },
   {
     name: "Zoropay",
     image: zoropay,
     className: "w-[59px] h-[13px] md:w-[160px] md:h-[37px]",
+    style: { height: "3rem" }
   },
   {
     name: "Greencamp",
     image: greenCamp,
     className: "w-[29px] h-[29px] md:w-[80px] md:h-[80px]",
+    style: { height: "3rem", width: "" }
   },
   {
     name: "PaymentLogue",
