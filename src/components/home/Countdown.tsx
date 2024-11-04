@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../common/Button";
 import countdown from "@/functions/countdown";
+import Link from "next/link";
 
 interface Countdown {
   daysLeft: string | number;
@@ -73,14 +74,14 @@ const Countdown = () => {
             textColor="text-black-100"
           />
         </a>
-        <a href="/events">
+        <Link href="/events">
           <Button
             text="Check out other events"
             noIcon
             transparent
             className="text-9 md:text-6"
           />
-        </a>
+        </Link>
       </div>
     </section>
   );
