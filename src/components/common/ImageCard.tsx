@@ -21,7 +21,11 @@ const ImageCard: React.FC<CardProps> = ({
         width ? width : "w-[272px] md:w-[409px]"
       } ${height ? height : "h-[308px] md:h-[500px]"}   mb-[16px] `}
     >
-      <Image src={image} alt={name} objectFit="cover" className="h-full" />
+      <Image
+        src={image}
+        alt={name}
+        className="h-full object-cover object-center"
+      />
       <div className="w-[100%] absolute bottom-0 rounded-lg">
         <div className=" bg-gradient-to-b from-transparent via-black-30/70 to-black-100 p-9">
           <h3 className="text-white  text-6 md:text-4">{name}</h3>
