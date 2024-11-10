@@ -31,24 +31,21 @@ const Series: React.FC<Props> = ({ img1, img2, img3, title, date, link }) => {
               <Image
                 src={img1}
                 alt="slide_image"
-                className="rounded-[16px] h-[400px]"
-                objectFit="contain"
+                className="rounded-[16px] object-cover object-center h-[400px]"
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
                 src={img2}
                 alt="slide_image"
-                className="rounded-[16px] h-[400px]"
-                objectFit="contain"
+                className="rounded-[16px] object-cover object-center h-[400px]"
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
                 src={img3}
                 alt="slide_image"
-                className="rounded-[16px] h-[400px]"
-                objectFit="contain"
+                className="rounded-[16px] object-cover object-center h-[400px]"
               />
             </SwiperSlide>
           </>
