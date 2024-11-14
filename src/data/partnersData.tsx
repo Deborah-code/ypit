@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import { CSSProperties } from "react";
+import acadaworks from "../assets/commons/acadaworks.png";
 import bounce from "../assets/commons/bounce.png";
 import greenCamp from "../assets/commons/greenCamp.png";
 import paymentLogue from "../assets/commons/paymentLogue.png";
@@ -49,6 +50,11 @@ export const PartnersData: Partners[] = [
   {
     name: "Bounce",
     image: bounce,
+    className: "w-[30px] h-[30px] md:w-[83px] md:h-[83px]",
+  },
+  {
+    name: "Acada Works",
+    image: acadaworks,
     className: "w-[30px] h-[30px] md:w-[83px] md:h-[83px]",
   },
 ];
