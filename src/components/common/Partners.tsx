@@ -11,8 +11,7 @@ const Partners = () => {
         Some of our recent partners
       </h3>
       <div className="highlight-inner overflow-x-scroll">
-        {/* <div className="flex items-center gap-[24px] md:gap-[36px] px-[18px]"> */}
-        <Marquee pauseOnHover loop={0}>
+        <Marquee pauseOnHover loop={0} speed={80}>
           {partners.map((partner, index) => (
             <Image
               key={index}
@@ -28,8 +27,6 @@ const Partners = () => {
             />
           ))}
         </Marquee>
-
-        {/* </div> */}
       </div>
     </div>
   );
