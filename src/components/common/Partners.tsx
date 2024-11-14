@@ -22,7 +22,7 @@ const Partners = () => {
               alt={partner.name}
               objectFit="contain"
               className={partner.className}
-              style={{ maxHeight: 200 }}
+              style={{ maxHeight: 200, maxWidth: 200 }}
             />
           ))}
         </div>
