@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             </p>
           </div>
           <div className="flex flex-row items-center gap-9 bg-gradient-radial  ">
-            <p className="text-4 md:text-3 text-gray-900">5+</p>
+            <p className="text-4 md:text-3 text-gray-900">7+</p>
             <p className="text-base text-gray-500 text-start">
               Community <br /> Events
             </p>
