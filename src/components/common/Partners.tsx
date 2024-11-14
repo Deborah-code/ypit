@@ -10,7 +10,7 @@ const Partners = () => {
       <h3 className="text-4 md:text-2 pt-5 md:pt-1 pb-8 md:pd-4">
         Some of our recent partners
       </h3>
-      <div className="highlight-inner overflow-x-scroll">
+      <div className="highlight-inner overflow-x-hidden">
         <Marquee pauseOnHover loop={0} speed={80}>
           {partners.map((partner, index) => (
             <Image
