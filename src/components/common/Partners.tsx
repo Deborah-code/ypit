@@ -1,9 +1,7 @@
 import { PartnersData } from "@/data/partnersData";
 import Image from "next/image";
-import React from "react";
 import SwiperCore from "swiper";
 import { Autoplay, Parallax } from "swiper/modules";
-
 
 SwiperCore.use([Autoplay, Parallax]);
 
@@ -15,19 +13,16 @@ const Partners = () => {
       <h3 className="text-4 md:text-2 pt-5 md:pt-1 pb-8 md:pd-4">
         Some of our recent partners
       </h3>
-      <div
-        className="highlight-inner overflow-x-scroll"
-      >
+      <div className="highlight-inner overflow-x-scroll">
         <div className="flex items-center gap-[24px] md:gap-[36px] px-[18px]">
-          {
-            partners.map((partner, index) => (
+          {partners.map((partner, index) => (
             <Image
-            key={index}
-            src={partner.image}
-            alt={partner.name}
-            objectFit="contain"
-            className={partner.className}
-            style={{ ...partner.style }}
+              key={index}
+              src={partner.image}
+              alt={partner.name}
+              objectFit="contain"
+              className={partner.className}
+              style={{ maxHeight: 200, ...partner.style }}
             />
           ))}
         </div>
