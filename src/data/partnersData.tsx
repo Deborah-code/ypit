@@ -53,6 +53,7 @@ export const PartnersData = [
     name: "PaymentLogue",
     image: paymentLogue,
     className: "w-[59px] h-[29px] md:w-[211px] md:h-[50px]",
+    style: { maxWidth: 200 },
   },
   {
     name: "TechBabble",
@@ -62,6 +63,6 @@ export const PartnersData = [
   {
     name: "Bounce",
     image: bounce,
-    className: "w-[30px] h-[30px] md:w-[83px] md:h-[83px]",
+    className: "w-[30px] h-[30px] md:w-[63px] md:h-[63px] ",
   },
 ] as Partners[];

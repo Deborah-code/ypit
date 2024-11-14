@@ -12,7 +12,7 @@ const Partners = () => {
       </h3>
       <div className="highlight-inner overflow-x-scroll">
         {/* <div className="flex items-center gap-[24px] md:gap-[36px] px-[18px]"> */}
-        <Marquee pauseOnHover>
+        <Marquee pauseOnHover loop={0}>
           {partners.map((partner, index) => (
             <Image
               key={index}
@@ -22,7 +22,6 @@ const Partners = () => {
               className={partner.className}
               style={{
                 maxHeight: 150,
-                maxWidth: 200,
                 margin: 15,
                 ...partner.style,
               }}
