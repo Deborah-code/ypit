@@ -14,7 +14,7 @@ const Partners = () => {
         Some of our recent partners
       </h3>
       <div className="highlight-inner overflow-x-scroll">
-        <div className="flex items-center gap-[24px] md:gap-[36px] px-[18px] max-h-[100px]">
+        <div className="flex items-center gap-[24px] md:gap-[36px] px-[18px]">
           {partners.map((partner, index) => (
             <Image
               key={index}
