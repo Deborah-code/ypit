@@ -1,9 +1,6 @@
 import { PartnersData } from "@/data/partnersData";
 import Image from "next/image";
-import SwiperCore from "swiper";
-import { Autoplay, Parallax } from "swiper/modules";
-
-SwiperCore.use([Autoplay, Parallax]);
+import Marquee from "react-fast-marquee";
 
 const Partners = () => {
   const partners = PartnersData;
@@ -14,7 +11,8 @@ const Partners = () => {
         Some of our recent partners
       </h3>
       <div className="highlight-inner overflow-x-scroll">
-        <div className="flex items-center gap-[24px] md:gap-[36px] px-[18px]">
+        {/* <div className="flex items-center gap-[24px] md:gap-[36px] px-[18px]"> */}
+        <Marquee>
           {partners.map((partner, index) => (
             <Image
               key={index}
@@ -25,7 +23,9 @@ const Partners = () => {
               style={{ maxHeight: 200, ...partner.style }}
             />
           ))}
-        </div>
+        </Marquee>
+
+        {/* </div> */}
       </div>
     </div>
   );
