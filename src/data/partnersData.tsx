@@ -21,6 +21,11 @@ export interface Partners {
 
 export const PartnersData = [
   {
+    name: "Acada Works",
+    image: acadaWorks,
+    className: "w-[30px] h-[30px] max-h-[200px] md:w-[83px] md:h-[83px]",
+  },
+  {
     name: "Tech Cabal",
     image: techCabal,
     className: "w-[59px] h-[13px] md:w-[160px] md:h-[37px]",
@@ -58,10 +63,5 @@ export const PartnersData = [
     name: "Bounce",
     image: bounce,
     className: "w-[30px] h-[30px] md:w-[83px] md:h-[83px]",
-  },
-  {
-    name: "Acada Works",
-    image: acadaWorks,
-    className: "w-[30px] h-[30px] max-h-[200px] md:w-[83px] md:h-[83px]",
   },
 ] as Partners[];
