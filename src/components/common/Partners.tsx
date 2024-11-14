@@ -20,7 +20,12 @@ const Partners = () => {
               alt={partner.name}
               objectFit="contain"
               className={partner.className}
-              style={{ maxHeight: 150, margin: 15, ...partner.style }}
+              style={{
+                maxHeight: 150,
+                maxWidth: 200,
+                margin: 15,
+                ...partner.style,
+              }}
             />
           ))}
         </Marquee>
