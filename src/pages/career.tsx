@@ -5,7 +5,13 @@ import Head from 'next/head';
 const Career = () => {
   return (
     <>
-      <main className=" flex flex-col items-center justify-center mt-[38px]"   style={{ fontFamily: 'MainFont, sans-serif' }}>
+    <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet" />
+      </Head>
+
+      <main className="flex flex-col items-center justify-center mt-[38px] font-neue">
         <button className="bg-[#EEE6F9] text-[#5100BF] px-9 h-10 rounded-full">
           AI Career Path Recommender
         </button>
@@ -15,17 +21,16 @@ const Career = () => {
             <rect x="2.5" y="2" width="93" height="93" rx="8" stroke="#EEE6F9" strokeWidth="4" />
             <path d="M61.6016 23H74.3021V35.7005H61.6016V23ZM48.901 35.7005H23.5V48.401H40.6986L32.8613 57.8969C32.0341 58.8994 30.9955 59.7066 29.8198 60.2606C28.6441 60.8146 27.3604 61.1018 26.0607 61.1016H23.5V73.8021H28.0255C33.2018 73.8021 38.109 71.4899 41.4043 67.4971L48.901 58.4145V73.8021H61.6016V35.7005H48.901Z" fill="#5100BF" />
           </svg>
-          <h2
-          className="font-extrabold text-[64px] text-[#171717] font-bigshoulder">
+          <h2 className="font-bold text-[64px] text-[#171717]" style={{ fontFamily: 'Big Shoulders Display, sans-serif' }} >
             Welcome
           </h2>
         </div>
 
-        <p className="font-normal px-52 text-[24px] mb-3 xs:px-[10px]  ">
+        <p className="font-normal mx-52 text-[24px] mb-3 xs:px-[10px]">
           Are you confused about your career path? Our AI recommender system provides personalised career paths based on your interests, skills, and personality traits.
         </p>
 
-        <Image src={Picture} width={920} height={300} alt="Career Path Image"/>
+        <Image src={Picture} width={920} height={300} alt="Career Path Image" />
 
         <div className="flex gap-[24px] mb-20 mt-3 items-center justify-center">
           <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
