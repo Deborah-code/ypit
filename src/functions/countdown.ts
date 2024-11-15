@@ -1,5 +1,5 @@
 export default function countdown() {
-  const eventDate = new Date("2024-04-27 13:00");
+  const eventDate = new Date("2024-11-30 13:00");
   const today = new Date();
   const dayDifferenceInMilliseconds = eventDate.getTime() - today.getTime();
   const isNotEventDay = dayDifferenceInMilliseconds > 0
