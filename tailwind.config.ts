@@ -67,13 +67,7 @@ const config: Config = {
           neue: ['var(--font-neue)'],
         },
         screens: {
-          // Custom breakpoints (mobile-first approach)
-          'xs': '375px',   // Custom breakpoint for very small screens
-          'sm': '640px',   // Default sm breakpoint (small screens)
-          'md': '768px',   // Default md breakpoint (medium screens)
-          'lg': '1024px',  // Default lg breakpoint (large screens)
-          'xl': '1280px',  // Default xl breakpoint (extra-large screens)
-          '2xl': '1536px', // Default 2xl breakpoint (very large screens)
+          'xs': '375px',  
         },
       },
   },
