@@ -35,17 +35,16 @@ const Card: FC<CardProps> = ({
             display: "block",
             marginInline: "auto",
           }}
-          width="560"
-          height="315"
           src={videoLink}
           title="YouTube video player"
+          className="w-full md:h-[315px] md:w-[560px]"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
       )}
       <div>
         {heading && (
           <h2
-            className={`pb-8 font-medium tetx-5 md:text-3 ${
+            className={`pb-8 pt-2.5 md:pt-0 font-medium text-5 md:text-3 ${
               headingColor ? headingColor : "text-purple-100"
             }`}
           >

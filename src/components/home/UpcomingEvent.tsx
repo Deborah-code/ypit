@@ -4,8 +4,8 @@ import Card from "../common/Card";
 
 const UpcomingEvent = () => {
   return (
-    <div className="p-8 my-[4rem] bg-purple-100 w-[100%] rounded-[1.5rem] flex flex-col gap-y-[2rem] gap-x-[1rem] md:grid  md:grid-cols-2 ">
-      <div className="hidden md:grid md:grid-cols-2 gap-y-[2rem] gap-x-[1rem] col-span-2">
+    <div className="p-3.5 md:p-8 my-[4rem] bg-purple-100 w-[100%] rounded-[1.5rem] flex flex-col gap-y-[2rem] gap-x-[1rem] md:grid  md:grid-cols-2 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[2rem] gap-x-[1rem] col-span-2">
         <Card
           videoLink={
             "https://www.youtube.com/embed/xc2BbFEqcFo?si=GS-Nej3k9WgPAiDG"
