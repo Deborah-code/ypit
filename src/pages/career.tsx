@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Picture from '../assets/commons/Group 33.svg';
-import Head from 'next/head';
 
 const Career = () => {
   return (
