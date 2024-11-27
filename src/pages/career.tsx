@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Picture from '../assets/commons/Group 33.svg';
-
+import Image, { StaticImageData } from "next/image";
+import Logo from '../assets/commons/Group 33.svg'
 const Career = () => {
   return (
     <>
@@ -21,11 +20,11 @@ const Career = () => {
           </h2>
         </div>
 
-        <p className="font-normal mx-52 text-[24px] mb-3 xs:px-[10px]">
+        <p className="font-normal mx-52 text-[24px] mb-2 xs:px-[10px]">
           Are you confused about your career path? Our AI recommender system provides personalised career paths based on your interests, skills, and personality traits.
         </p>
 
-        <Image src={Picture} width={920} height={300} alt="Career Path Image" />
+        <Image src={Logo as StaticImageData} alt="Hero Image" className="-pt-2 -mt-5 " />
 
         <div className="flex gap-[24px] mb-20 mt-3 items-center justify-center">
           <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
