@@ -67,7 +67,8 @@ const config: Config = {
           neue: ['var(--font-neue)'],
         },
         screens: {
-          'xs': '375px',  
+          'max-sm': { max: '400px' }, 
+
         },
       },
   },

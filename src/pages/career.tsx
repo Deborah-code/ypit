@@ -20,7 +20,7 @@ const Career = () => {
           </h2>
         </div>
 
-        <p className="font-normal mx-52 text-[24px] mb-2 xs:px-[10px]">
+        <p className="font-normal mx-52 text-[24px] mb-2 lg:mx-52 md:mx-5 0 max-sm:mx-0">
           Are you confused about your career path? Our AI recommender system provides personalised career paths based on your interests, skills, and personality traits.
         </p>
 
