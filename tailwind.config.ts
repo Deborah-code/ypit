@@ -66,6 +66,10 @@ const config: Config = {
           bigshoulder: ["var(--font-big-shoulders-display)"],
           neue: ['var(--font-neue)'],
         },
+        screens: {
+          'max-sm': { max: '400px' }, 
+
+        },
       },
   },
   plugins: [],

@@ -32,3 +32,15 @@
 }
 
 
+@font-face {
+  font-family: 'MainFont';
+  src: url('/fonts/NHass/Helvetica Neue Medium Extended/Helvetica Neue Medium Extended.ttf') format('truetype'); /* Define the path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'YourFont', sans-serif; /* Apply the font globally */
+}
+
+

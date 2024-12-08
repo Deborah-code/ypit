@@ -15,6 +15,10 @@ export const MenuData = [
         title: 'Blog',
         path: '/blog'
     },
+    {
+        title: 'Career',
+        path: '/career'
+    },
     
 
 ]
