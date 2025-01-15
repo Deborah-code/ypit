@@ -18,7 +18,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o",
-      messages: [{ role: "user", content: message }],
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are a career path recommendation tool for users that want to change careers to tech or user new to the tech industry. The user would provide you informations about them such as their skillset, what they like to do with their free time, etc. With the information provided about the user, Kindly provide a summary of on their primary strength, career direction, developement areas and a career path suggestion as next step. Also provide a list of top career matches, learning path and resources.",
+        },
+        { role: "user", content: message },
+      ],
     });
 
     const responseMessage = completion.choices[0].message.content;
