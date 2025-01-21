@@ -1,11 +1,13 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 
+interface CustomAPIRequest extends NextApiRequest {}
+interface CustomAPIResponse extends NextApiResponse {}
 const openai = new OpenAI({
   apiKey: process.env.openaiKey,
 });
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function CareerPathRequestHandler(req: CustomAPIRequest, res: CustomAPIResponse) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
