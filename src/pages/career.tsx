@@ -1,10 +1,16 @@
-import Image, { StaticImageData } from "next/image";
+import Image, {type StaticImageData} from "next/image";
 import Logo from '../assets/commons/Group 33.svg'
+
 const Career = () => {
   return (
     <>
-   
-
+      {/*<section>*/}
+      {/*  <Image*/}
+      {/*      src={LogoImg}*/}
+      {/*      alt="Logo"*/}
+      {/*      className="max-w-[130px] max-h-[50px] cursor-pointer"*/}
+      {/*  />*/}
+      {/*</section>*/}
       <main className="flex flex-col items-center justify-center mt-[38px] font-neue">
         <button className="bg-[#EEE6F9] text-[#5100BF] px-9 h-10 rounded-full">
           AI Career Path Recommender
