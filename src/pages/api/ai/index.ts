@@ -1,19 +1,22 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 
-interface CustomAPIRequest extends NextApiRequest {}
-interface CustomAPIResponse extends NextApiResponse {}
+interface RequestBody {
+  message: string;
+}
+
 const openai = new OpenAI({
   apiKey: process.env.openaiKey,
 });
 
-export default async function CareerPathRequestHandler(req: CustomAPIRequest, res: CustomAPIResponse) {
+export default async function CareerPathRequestHandler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { message } = req.body;
+    const body = req.body as RequestBody;
+    const { message } = body;
     if (!message) {
       return res.status(400).json({ error: "Message is required" });
     }
