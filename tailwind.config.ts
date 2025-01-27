@@ -30,6 +30,12 @@ const config: Config = {
             20: "#FFF4E9"
           },
           white: '#FFFFFF',
+          gray: {
+            50: '#ECECEC',
+            70: '#5B5A5A',
+            75: '#D5D5D5',
+            150: '#CDCCCE'
+          },
           green: 'rgba(49, 255, 142, 0.15)'
           
         },

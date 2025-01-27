@@ -13,11 +13,14 @@ type Props = {
 const Layout = ({ children }: Props) => {
   const router = useRouter();
   const isCareerPage = router.pathname === '/career';
+  const isReportPage = router.pathname === '/report';
+//px-[16px]  max-w-[1340px] 
 
   return (
     <main
-      className={`flex flex-col items-center justify-between px-[16px] py-[24px] max-w-[1340px] m-auto text-center overflow-hidden`}
-    >
+    className={`flex flex-col items-center justify-between  py-[24px] 
+      ${isReportPage ? 'w-full' : 'max-w-[1340px] px-[16px]'} m-auto text-center overflow-hidden`}
+  >
       <div className="hidden md:block w-[100%]">
         <Navbar />
       </div>
@@ -27,7 +30,8 @@ const Layout = ({ children }: Props) => {
       {children}
       <Analytics />
       <SpeedInsights />
-      {!isCareerPage && <Footer />}
+      {!isCareerPage && !isReportPage && <Footer />}
+
     </main>
   );
 };
