@@ -70,5 +70,6 @@ export const PartnersData = [
     name: "Bounce",
     image: bounce,
     className: "w-[30px] h-[30px] md:w-[63px] md:h-[63px] ",
+    style: { width: "6rem", height: "6rem" },
   },
 ] as Partners[];
