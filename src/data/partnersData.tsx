@@ -5,6 +5,7 @@ import { type CSSProperties } from "react";
 import acadaWorks from "../assets/commons/acada-logo.png";
 import bounce from "../assets/commons/bounce.png";
 import greenCamp from "../assets/commons/greenCamp.png";
+import moniepoint from "../assets/commons/Moniepointlogo.png";
 import paymentLogue from "../assets/commons/paymentLogue.png";
 import productDive from "../assets/commons/productDive.png";
 import techBabble from "../assets/commons/techBabble.png";
@@ -20,6 +21,11 @@ export interface Partners {
 }
 
 export const PartnersData = [
+  {
+    name: "MoniePoint",
+    image: moniepoint,
+    style: { maxWidth: "15rem" },
+  },
   {
     name: "Acada Works",
     image: acadaWorks,
