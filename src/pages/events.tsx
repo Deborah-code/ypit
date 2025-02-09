@@ -23,17 +23,16 @@ const Events = () => {
       <>
         <section className=" pt-5 md:pt-1">
           <h1 className="text-3 md:text-1 bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text">
-            Series F <span className="text-black-100">-</span>
+            Series G <span className="text-black-100">-</span>
           </h1>
           <h1 className="text-4 md:text-1 pb-8 md:inline">
-            Our next event in 2024
+            Our next event in 2025
           </h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
-            YPIT&apos;s Series F is the latest installation of our community
+            YPIT&apos;s Series G is the next installation of our community
             network events, where we&apos;ll host young people in Nigeria&apos;s
             tech ecosystem to come and have a day of fun, learning, and
-            networking on us. It&apos;s also the first one we&apos;ll be having
-            on the mainland
+            networking on us.
           </p>
           <div className="pt-8">
             <div className="flex items-center justify-center gap-[32px]">
@@ -42,7 +41,7 @@ const Events = () => {
                 target="_blank"
               >
                 <Button
-                  text="Save a spot now!"
+                  text="Join the waitlist"
                   className="text-black-100 text-9 md:text-6"
                   borderColor="border-purple-100 bg-purple-20"
                   textColor="text-black-100"
