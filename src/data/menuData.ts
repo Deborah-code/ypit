@@ -17,7 +17,8 @@ export const MenuData = [
     },
     {
         title: 'Career',
-        path: '/career'
+        path: '/career',
+
     },
     
 
