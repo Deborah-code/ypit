@@ -1,9 +1,26 @@
-import React from "react";
-import Link from "next/link";
-import Image, { type StaticImageData } from "next/image";
 import Logo from "@/assets/commons/Group 33.svg";
+import Image, { type StaticImageData } from "next/image";
 
-const Email = () => {
+interface EmailProps {
+  firstName: string;
+  email: string;
+  handleEmailChange: (email: string) => void;
+  onSubmit: () => void;
+}
+
+const Email: React.FC<EmailProps> = ({
+  firstName,
+  email,
+  handleEmailChange,
+  onSubmit,
+}) => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email.trim()) {
+      onSubmit();
+    }
+  };
+
   return (
     <>
       <main className="flex flex-col items-center justify-center mt-[38px] font-neue">
@@ -62,34 +79,39 @@ const Email = () => {
             />
           </svg>
           <h2 className="text-[#3A3A3A] text-[24px]">
-            Hi Fawaz, please enter your email to get started.
+            Hi {firstName}, please enter your email to get started.
           </h2>
         </div>
 
         <div className="flex items-center justify-center gap-[10px]">
-          <form>
-            <input
-              type="text"
-              placeholder="Enter Email"
-              className="rounded-[15px] bg-[#ECECEC] w-[18rem] px-[15px] focus:outline-none py-[15px] text-md placeholder:text-[#ADADAD]"
-            />
-          </form>
-          <Link href="/career/welcome">
-            <button className="bg-[#5100BF] px-[20px] h-14 rounded-2xl">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          <form onSubmit={handleSubmit}>
+            <div className="flex gap-[10px]">
+              <input
+                type="email"
+                placeholder="Enter Email"
+                value={email}
+                onChange={(e) => handleEmailChange(e.target.value)}
+                className="rounded-[15px] bg-[#ECECEC] w-[18rem] px-[15px] focus:outline-none py-[15px] text-md placeholder:text-[#ADADAD]"
+              />
+              <button
+                type="submit"
+                className="bg-[#5100BF] px-[20px] h-14 rounded-2xl"
               >
-                <path
-                  d="M0 14.4489C0.062226 14.3934 0.127846 14.3357 0.187809 14.2814L12.1601 2.30915L12.3603 2.1089L3.87498 2.1089C3.87498 1.37689 3.87498 0.677698 3.87498 0L16.0011 0C16.0011 4.03338 16.0011 8.09164 16.0011 12.1329L13.916 12.1329C13.916 9.33616 13.916 6.51223 13.916 3.6883L13.8572 3.66907L13.6999 3.8252L1.70273 15.828C1.64842 15.8823 1.60091 15.9412 1.54999 16L0 14.4489Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-          </Link>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 14.4489C0.062226 14.3934 0.127846 14.3357 0.187809 14.2814L12.1601 2.30915L12.3603 2.1089L3.87498 2.1089C3.87498 1.37689 3.87498 0.677698 3.87498 0L16.0011 0C16.0011 4.03338 16.0011 8.09164 16.0011 12.1329L13.916 12.1329C13.916 9.33616 13.916 6.51223 13.916 3.6883L13.8572 3.66907L13.6999 3.8252L1.70273 15.828C1.64842 15.8823 1.60091 15.9412 1.54999 16L0 14.4489Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
 
         <p className="flex gap-[5px] mt-[30px] text-[#8E8D8D] text-[18px]">

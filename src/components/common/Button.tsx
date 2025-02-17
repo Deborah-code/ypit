@@ -11,12 +11,32 @@ interface ButtonProps {
   borderColor?: string;
   textColor?: string;
   bgColor?: string;
+  disabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = (props) => {
+  const handleClick = () => {
+    if (!props.disabled && props.onClick) {
+      props.onClick();
+    }
+  };
+
+  // Get the icon color based on props
+  const getIconColor = () => {
+    if (props.globeButton) return "#5100bf";
+    if (props.transparent) return "white";
+    // Use the text color for the icon if specified, otherwise default to purple
+    return props.textColor === "text-white" ? "white" : "#5100bf";
+  };
+
   return (
-    <div className="cursor-pointer text-center">
+    <div
+      className={`cursor-pointer text-center ${
+        props.disabled ? "opacity-50 cursor-not-allowed" : ""
+      }`}
+    >
       <button
+        type="button"
         className={` ${
           props.transparent
             ? "bg-[transparent] border-white"
@@ -24,7 +44,8 @@ const Button: FC<ButtonProps> = (props) => {
                 props.borderColor ? props.borderColor : "border-purple-100"
               } ${props.className} `
         } py-[8px] px-[8px] md:px-[20px]  border-solid border-2 rounded-[41px] `}
-        onClick={() => props.onClick && props.onClick()}
+        onClick={handleClick}
+        disabled={props.disabled}
       >
         <div className="flex items-center gap-[8px]">
           <p
@@ -45,7 +66,7 @@ const Button: FC<ButtonProps> = (props) => {
           ) : (
             <Icon
               icon="iconoir:arrow-tr"
-              color={props.textColor ? "#000000" : "#5100bf"}
+              color={getIconColor()}
               width="16"
               height="16"
             />

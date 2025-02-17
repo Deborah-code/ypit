@@ -1,7 +1,21 @@
-import React from "react";
-import Link from "next/link";
+import Logo from "@/assets/commons/Group 33.svg";
+import Image, { type StaticImageData } from "next/image";
 
-const Welcome = () => {
+interface WelcomePageProps {
+  firstName: string;
+  handleNameChange: (name: string) => void;
+  onSubmit: () => void;
+}
+
+const WelcomePage: React.FC<WelcomePageProps> = ({
+  firstName,
+  handleNameChange,
+  onSubmit,
+}) => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <main className="flex flex-col items-center justify-center mt-[38px] font-neue">
@@ -31,11 +45,22 @@ const Welcome = () => {
             />
           </svg>
           <h2 className="font-bold text-[64px] text-[#171717] font-bigshoulder">
-            Welcome, Fawaz
+            Welcome
           </h2>
         </div>
+        <p className="font-normal mx-52 text-[24px] mb-2 lg:mx-52 md:mx-5 0 max-sm:mx-0">
+          Are you confused about your career path? Our AI recommender system
+          provides personalised career paths based on your interests, skills,
+          and personality traits.
+        </p>
 
-        <div className="flex gap-[24px] mb-[2px] mt-3 items-center justify-center">
+        <Image
+          src={Logo as StaticImageData}
+          alt="Hero Image"
+          className="-pt-2 -mt-5 "
+        />
+
+        <div className="flex gap-[24px] mb-20 mt-3 items-center justify-center">
           <svg
             width="32"
             height="33"
@@ -49,76 +74,42 @@ const Welcome = () => {
             />
           </svg>
           <h2 className="text-[#3A3A3A] text-[24px]">
-            Here are the instructions below
+            Please enter your name to get started
           </h2>
         </div>
 
-        <div
-          className={"flex gap-[24px] mb-20 mt-3 items-center justify-center"}
-        >
-          <div className=" flex items-center gap-[10px] bg-[#ECECEC]   rounded-[10px] p-[20px] text-start">
+        <div className="flex items-center justify-center gap-[10px]">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              value={firstName}
+              onChange={(e) => handleNameChange(e.target.value)}
+              className="rounded-[15px] bg-[#ECECEC] w-[18rem] px-[15px] focus:outline-none py-[15px] text-md placeholder:text-[#ADADAD]"
+            />
+          </form>
+
+          <button
+            className="bg-[#5100BF] px-[20px] h-14 rounded-2xl"
+            onClick={() => {
+              if (firstName.trim()) {
+                onSubmit();
+              }
+            }}
+          >
             <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
             >
               <path
-                fill="#00000040"
-                fillRule="evenodd"
-                d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12m10-4a1 1 0 1 0-2 0v5a1 1 0 0 0 1 1h5a1 1 0 1 0 0-2h-4z"
-                clipRule="evenodd"
-              ></path>
+                d="M0 14.4489C0.062226 14.3934 0.127846 14.3357 0.187809 14.2814L12.1601 2.30915L12.3603 2.1089L3.87498 2.1089C3.87498 1.37689 3.87498 0.677698 3.87498 0L16.0011 0C16.0011 4.03338 16.0011 8.09164 16.0011 12.1329L13.916 12.1329C13.916 9.33616 13.916 6.51223 13.916 3.6883L13.8572 3.66907L13.6999 3.8252L1.70273 15.828C1.64842 15.8823 1.60091 15.9412 1.54999 16L0 14.4489Z"
+                fill="white"
+              />
             </svg>
-            <h4 className="text-xl">
-              It takes Approximately 15mins to <br /> complete the questions.
-            </h4>
-          </div>
-
-          <div className=" flex items-center gap-[10px] bg-[#ECECEC]   rounded-[10px] p-[20px] text-start">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke="#00000040"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-              >
-                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                <path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2m-5-4v.01"></path>
-                <path d="M12 14a1.5 1.5 0 1 0-1.14-2.474"></path>
-              </g>
-            </svg>
-            <h4 className="text-xl">
-              Answer all questions correctly. This helps <br /> us with an
-              accurate recommendation.
-            </h4>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-center gap-[10px]">
-          <Link href="/career/prompt">
-            <button className="bg-[#5100BF] px-[20px] h-14 rounded-2xl flex items-center justify-center text-[#EEE6F9]">
-              <span className="mr-9"> Get Started</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 14.4489C0.062226 14.3934 0.127846 14.3357 0.187809 14.2814L12.1601 2.30915L12.3603 2.1089L3.87498 2.1089C3.87498 1.37689 3.87498 0.677698 3.87498 0L16.0011 0C16.0011 4.03338 16.0011 8.09164 16.0011 12.1329L13.916 12.1329C13.916 9.33616 13.916 6.51223 13.916 3.6883L13.8572 3.66907L13.6999 3.8252L1.70273 15.828C1.64842 15.8823 1.60091 15.9412 1.54999 16L0 14.4489Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-          </Link>
+          </button>
         </div>
 
         <p className="flex gap-[5px] mt-[30px] text-[#8E8D8D] text-[18px]">
@@ -142,4 +133,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default WelcomePage;
