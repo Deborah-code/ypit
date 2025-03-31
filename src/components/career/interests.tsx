@@ -93,7 +93,7 @@ const Interests: React.FC<InterestsProps> = ({
               />
             </svg>
             <h2 className="font-normal text-[32px] text-start text-[#3A3A3A]">
-              Hi {firstName}, let's explore your interests! <br />
+              Hi {firstName}, let&apos;s explore your interests! <br />
               Which of these areas naturally draw your attention?
             </h2>
           </div>

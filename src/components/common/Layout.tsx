@@ -13,14 +13,14 @@ type Props = {
 const Layout = ({ children }: Props) => {
   const router = useRouter();
   const isCareerPage = router.pathname === "/career";
-  const isCareerEmail = router.pathname === "/career/email";
+  const isReportPage = router.pathname === "/career/report";
 
   return (
     <main
       className={`flex flex-col items-center justify-between px-[16px] py-[24px] max-w-[1340px] m-auto text-center overflow-hidden`}
     >
       <div className="hidden md:block w-[100%]">
-        <Navbar />
+        {!isReportPage && <Navbar />}
       </div>
       <div className="block w-[100%] md:hidden">
         <MobileNavBar />
@@ -28,7 +28,7 @@ const Layout = ({ children }: Props) => {
       {children}
       <Analytics />
       <SpeedInsights />
-      {!isCareerPage && !isCareerEmail && <Footer />}
+      {!isCareerPage && !isReportPage && <Footer />}
     </main>
   );
 };

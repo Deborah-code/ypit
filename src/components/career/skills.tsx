@@ -84,7 +84,7 @@ const Skills: React.FC<SkillsProps> = ({ firstName, onSkillsSubmit }) => {
               />
             </svg>
             <h2 className="font-normal text-[32px] text-start text-[#3A3A3A]">
-              Hi {firstName}, let's talk about your skills! <br />
+              Hi {firstName}, let&apos;s talk about your skills! <br />
               Which of these skills do you have or enjoy using?
             </h2>
           </div>
