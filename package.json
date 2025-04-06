@@ -14,7 +14,6 @@
   "dependencies": {
     "@iconify/react": "^4.1.1",
     "@next/font": "^14.1.0",
-    "@next/swc-win32-x64-msvc": "^15.2.4",
     "@prisma/client": "^6.5.0",
     "@uidotdev/usehooks": "^2.4.1",
     "@vercel/analytics": "^1.2.2",
