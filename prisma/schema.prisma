@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,16 +8,29 @@ datasource db {
 }
 
 model User {
+  id                    String                 @id @default(auto()) @map("_id") @db.ObjectId
+  email                 String                 @unique
+  name                  String
+  createdAt             DateTime               @default(now()) @map("created_at")
+  updatedAt             DateTime               @updatedAt @map("updated_at")
+  careerRecommendations CareerRecommendation[]
+
+  @@map("users")
+}
+
+model CareerRecommendation {
   id                String   @id @default(auto()) @map("_id") @db.ObjectId
-  name              String
-  email             String   @unique
+  userId            String   @map("user_id") @db.ObjectId
+  user              User     @relation(fields: [userId], references: [id])
   interests         String[]
   skills            String[]
-  personalityTraits String[]
-  primaryStrengths  String[]
-  careerDirection   String
-  developmentAreas  String[]
-  careerMatches     Json
-  learningPath      Json
-  createdAt         DateTime @default(now())
+  personalityTraits String[] @map("personality_traits")
+  summary           Json
+  careerMatches     Json     @map("career_matches")
+  learningPath      Json     @map("learning_path")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  @@index([userId])
+  @@map("career_recommendations")
 }
