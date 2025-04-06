@@ -85,7 +85,6 @@ const Page = () => {
   const handleTraitsSubmit = async (traits: string[]) => {
     setIsLoading(true);
     setError(null);
-    setSelectedTraits(traits);
 
     try {
       const userProfile: UserProfile = {
@@ -93,7 +92,7 @@ const Page = () => {
         email,
         interests: selectedInterests,
         skills: selectedSkills,
-        personalityTraits: selectedTraits,
+        personalityTraits: traits,
       };
 
       const response = await fetch("/api/ai", {
