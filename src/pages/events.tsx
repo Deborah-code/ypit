@@ -25,9 +25,12 @@ const Events = () => {
     <main>
       <>
         <section className=" pt-5 md:pt-1">
-          <h1 className="text-3 md:text-1 bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text">
+          <div className='max-sm:w-[29%] max-sm:text-center max-sm:mx-auto'> 
+          <h1 className="text-3 md:text-1 bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text   ">
             Our first event in London!
           </h1>
+          </div>
+        
 
           <h1 className="text-4 md:text-1 pb-8 md:inline"></h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
