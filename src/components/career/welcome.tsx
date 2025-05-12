@@ -16,6 +16,12 @@ const WelcomePage: React.FC<WelcomePageProps> = ({
     e.preventDefault();
   };
 
+  const handleEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      onSubmit();
+    }
+  };
+
   return (
     <>
       <main className="flex flex-col items-center justify-center mt-[38px] font-neue">
@@ -85,6 +91,7 @@ const WelcomePage: React.FC<WelcomePageProps> = ({
               placeholder="Enter your name"
               value={firstName}
               onChange={(e) => handleNameChange(e.target.value)}
+              onKeyDown={handleEnter}
               className="rounded-[15px] bg-[#ECECEC] w-[18rem] px-[15px] focus:outline-none py-[15px] text-md placeholder:text-[#ADADAD]"
             />
           </form>
