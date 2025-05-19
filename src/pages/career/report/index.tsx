@@ -46,14 +46,22 @@ export default function ReportPage() {
   return (
     <>
       <main className="bg-purple-100 w-full h-full px-14 py-[64px] font-sans max-sm:px-0">
-        <section className="flex flex-col">
-          <ReportHeader />
-          <SummarySection recommendation={recommendation} />
-          <CareerMatchesSection careerMatches={recommendation.careerMatches} />
-          <LearningPathSection learningPath={recommendation.learningPath} />
-        </section>
+        <div id="career-report-container">
+          <ReportHeader
+            recommendation={recommendation}
+            userProfile={userProfile}
+          />
+
+          <section className="flex flex-col">
+            <SummarySection recommendation={recommendation} />
+            <CareerMatchesSection
+              careerMatches={recommendation.careerMatches}
+            />
+            <LearningPathSection learningPath={recommendation.learningPath} />
+          </section>
+        </div>
       </main>
-      <footer className="flex justify-center pb-[20px]">
+      <footer id="report-footer" className="flex justify-center pb-[20px]">
         <p className="flex gap-[5px] mt-[20px] text-[#8E8D8D] text-[18px]">
           Made with
           <Image src={love} alt="heart icon" />
