@@ -19,18 +19,29 @@ const Page = () => {
   const router = useRouter();
 
   // Form States
-  const [firstName, setFirstName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
-  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
-  const [selectedTraits, setSelectedTraits] = useState<string[]>([]);
+  const [firstName, setFirstName] = useState<string>("Suleiman");
+  const [email, setEmail] = useState<string>("smistura706@gmail.com");
+  const [selectedInterests, setSelectedInterests] = useState<string[]>([
+    "Web Development",
+    "UI/UX Design",
+  ]);
+  const [selectedSkills, setSelectedSkills] = useState<string[]>([
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+  ]);
+  const [selectedTraits, setSelectedTraits] = useState<string[]>([
+    "Creative",
+    "Analytical",
+  ]);
 
   // Flow Control States
-  const [isNameSubmitted, setIsNameSubmitted] = useState<boolean>(false);
-  const [isEmailSubmitted, setIsEmailSubmitted] = useState<boolean>(false);
+  const [isNameSubmitted, setIsNameSubmitted] = useState<boolean>(true);
+  const [isEmailSubmitted, setIsEmailSubmitted] = useState<boolean>(true);
   const [isInterestsSubmitted, setIsInterestsSubmitted] =
-    useState<boolean>(false);
-  const [isSkillsSubmitted, setIsSkillsSubmitted] = useState<boolean>(false);
+    useState<boolean>(true);
+  const [isSkillsSubmitted, setIsSkillsSubmitted] = useState<boolean>(true);
+  const [isTraitsSubmitted, setIsTraitsSubmitted] = useState<boolean>(true);
 
   // Loading and Error States
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -66,20 +77,20 @@ const Page = () => {
     setIsSkillsSubmitted(true);
   };
 
-  useEffect(() => {
-    const savedUserData = localStorage.getItem("savedUserData");
-    if (savedUserData) {
-      const { firstName, email, interests } = JSON.parse(savedUserData);
-      setFirstName(firstName);
-      setEmail(email);
-      setSelectedInterests(interests);
-      setIsNameSubmitted(true);
-      setIsEmailSubmitted(true);
-      setIsInterestsSubmitted(true);
+ // useEffect(() => {
+ //   const savedUserData = localStorage.getItem("savedUserData");
+ //   if (savedUserData) {
+ //     const { firstName, email, interests } = JSON.parse(savedUserData);
+ //     setFirstName(firstName);
+ //     setEmail(email);
+ //     setSelectedInterests(interests);
+ //     setIsNameSubmitted(true);
+ //     setIsEmailSubmitted(true);
+ //     setIsInterestsSubmitted(true);
       // Clear the saved data after restoring it
-      localStorage.removeItem("savedUserData");
-    }
-  }, []);
+ //     localStorage.removeItem("savedUserData");
+ //   }
+ // }, []);
   // In parent component (Page.tsx)
 
   const handleTraitsSubmit = async (traits: string[]) => {

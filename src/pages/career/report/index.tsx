@@ -45,7 +45,7 @@ export default function ReportPage() {
 
   return (
     <>
-      <main className="bg-purple-100 w-full h-full px-14 py-[64px] font-sans max-sm:px-0">
+      <main className="bg-purple-100 w-full h-full px-14 py-[64px] font-sans max-sm:px-[12px] max-sm:py-8">
         <section className="flex flex-col">
           <ReportHeader />
           <SummarySection recommendation={recommendation} />
