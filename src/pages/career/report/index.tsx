@@ -52,8 +52,10 @@ export default function ReportPage() {
           <CareerMatchesSection careerMatches={recommendation.careerMatches} />
           <LearningPathSection learningPath={recommendation.learningPath} />
         </section>
+
+        
       </main>
-      <footer className="flex justify-center pb-[20px]">
+      <footer id="report-footer" className="flex justify-center pb-[20px]">
         <p className="flex gap-[5px] mt-[20px] text-[#8E8D8D] text-[18px]">
           Made with
           <Image src={love} alt="heart icon" />
