@@ -1,3 +1,5 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 export interface CareerRequestBody {
   email: string;
   firstName: string;
@@ -28,4 +30,9 @@ export interface CareerResponse {
       }[];
     };
   };
+}
+
+// Add this default export
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(404).json({ error: 'This is a types-only file' })
 }
