@@ -14,9 +14,6 @@ import seriesE3 from "../assets/events/seriesE/3.jpeg";
 import seriesF1 from "../assets/events/seriesF/1.jpg";
 import seriesF2 from "../assets/events/seriesF/2.jpg";
 import seriesF3 from "../assets/events/seriesF/3.jpg";
-import Button from "../components/common/Button";
-import JoinCommunity from "../components/common/JoinCommunity";
-import Modal from "../components/common/Modal";
 
 const Events = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -25,52 +22,19 @@ const Events = () => {
     <main>
       <>
         <section className=" pt-5 md:pt-1">
-          <div className='max-sm:w-[29%] max-sm:text-center max-sm:mx-auto'> 
-          <h1 className="text-3 md:text-1 bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text   ">
-            Our first event in London!
-          </h1>
+          <div className="max-sm:w-[29%] max-sm:text-center max-sm:mx-auto">
+            <h1 className="text-3 md:text-1 bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text   ">
+              Our first event in London!
+            </h1>
           </div>
-        
 
           <h1 className="text-4 md:text-1 pb-8 md:inline"></h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
-            The next installation of YPIT is in the Big Smoke, where we&apos;ll
-            host young people in London&apos;s tech ecosystem to come and have a
-            day of fun, learning, and networking on us.
+            The last installation of YPIT was in the Big Smoke, where we hosted
+            over 30 young people in London&apos;s tech ecosystem to come and
+            have a day of fun, learning, and networking on us.
           </p>
-          <div className="pt-8">
-            <div className="flex items-center justify-center gap-[32px]">
-              <a
-                href="https://lu.ma/event/evt-zo2HoLM4Ghw4ZZD"
-                data-luma-action="checkout"
-                data-luma-event-id="evt-zo2HoLM4Ghw4ZZD"
-              >
-                <Button
-                  text="Register for Event"
-                  className="text-black-100 text-9 md:text-6"
-                  borderColor="border-purple-100 bg-purple-20"
-                  textColor="text-black-100"
-                  bgColor="bg-orange-20"
-                />
-                <script
-                  id="luma-checkout"
-                  src="https://embed.lu.ma/checkout-button.js"
-                />
-              </a>
-              <a href="mailto:hello@youngpeopleintech.com" target="_blank">
-                <p className="text-purple-100 underline">Become a sponsor</p>
-              </a>
-            </div>
-            {showModal && (
-              <Modal
-                isOpen={showModal}
-                onClick={() => setShowModal(!showModal)}
-                showCloseButton
-              >
-                <JoinCommunity />
-              </Modal>
-            )}
-          </div>
+
           <section className="max-w-[34%] md:max-w-[100%] m-auto h-full">
             {/* <Image
               src={seriesE}
