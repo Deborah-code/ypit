@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import type { JSX } from "react";
+
 type Props = {
   children: string | JSX.Element | JSX.Element[];
 };

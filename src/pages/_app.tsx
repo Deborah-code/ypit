@@ -1,10 +1,7 @@
 import Layout from "@/components/common/Layout";
 import "@/styles/globals.css";
-import {
-  Big_Shoulders_Display as Display,
-  Inter as Sans,
-} from "@next/font/google";
 import type { AppProps } from "next/app";
+import { Big_Shoulders as Display, Inter as Sans } from "next/font/google";
 import localFont from "next/font/local";
 
 const neueFont = localFont({
