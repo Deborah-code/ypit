@@ -11,10 +11,10 @@ export default function LearningPathSection({
   learningPath,
 }: LearningPathSectionProps) {
   return (
-    <div className="bg-[#ECECEC] text-black-70 mt-[70px] mb-[50px] flex-col items-start justify-center gap-16 mx-[25px] px-10 rounded-xl max-sm:mx-[8px] max-sm:px-[5px]">
-      <div className="flex items-start justify-start mt-[40px] gap-[20px]">
-        <Image src={Pointer} alt="pointer" />
-        <h2 className="text-2xl mb-[10px] font-[700]">
+    <div className="bg-[#ECECEC] text-black-70 mt-[70px] mb-[50px] flex-col items-start justify-center gap-16 lg:mx-[25px] px-10 rounded-xl max-sm:mx-[8px] max-sm:px-[5px]">
+      <div className="flex items-center justify-start mt-[40px] gap-[10px] ">
+        <Image src={Pointer} alt="pointer" width={25}/>
+        <h2 className="text-2xl mb-[10px] font-[700]  text-left">
           Recommended Learning Paths
         </h2>
       </div>
@@ -50,7 +50,7 @@ export default function LearningPathSection({
               {resource.links.map((link, linkIndex) => (
                 <li
                   key={linkIndex}
-                  className="text-[16px] text-left leading-[30px]"
+                  className="text-[16px] text-left leading-[30px] text-wrap"
                 >
                   {link}
                 </li>
