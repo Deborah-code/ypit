@@ -23,26 +23,16 @@ const Blog = () => {
         </span>{" "}
         from Young Minds in Tech
       </p>
-      <div
-        id="substack-feed-embed"
-        className="text-start md:max-w-[70%] m-auto"
-      ></div>
-      <Script id="substack-feed-script">
-        {`
-                    window.SubstackFeedWidget = {
-                        substackUrl: "someoneintech.substack.com",
-                        posts: 10,
-                        layout: "center",
-                        colors: {
-                            primary: "#404040",
-                            secondary: "#808080",
-                            background: "#FFFFFF",
-                        }
-                    };
-                `}
-      </Script>
+      <div data-supascribe-embed-id="707573068537" data-supascribe-feed></div>
+
+      <script src="https://js.supascribe.com/v1/loader/e3384SFv6Lc9Jqy4xNEHpu7neuu2.js" async></script>
     </main>
   );
 };
 
 export default Blog;
+
+
+
+// <!-- Supascribe Script -->
+// 
