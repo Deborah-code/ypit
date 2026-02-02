@@ -24,15 +24,16 @@ const Events = () => {
         <section className=" pt-5 md:pt-1">
           <div className="max-sm:w-[29%] max-sm:text-center max-sm:mx-auto">
             <h1 className="text-3 md:text-1 bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 inline-block text-transparent bg-clip-text   ">
-              Our next event in Lagos SeriesG!
+              What&apos;s next for YPIT?
             </h1>
           </div>
 
           <h1 className="text-4 md:text-1 pb-8 md:inline"></h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
-            The next installation of YPIT is coming to Lagos! On November 29th,
-            we&apos;ll be hosting young people in Lagos&apos;s tech ecosystem for
-            SeriesG to come and have a day of fun, learning, and networking on us.
+            Introducing <span className="text-yellow-100 font-medium">The Artificial Future</span>, 
+            YPIT&apos;s next chapter exploring how AI is reshaping the tech landscape. 
+            Stay tuned for details on our upcoming event where we&apos;ll dive into 
+            the opportunities, challenges, and innovations defining the future of tech.
           </p>
 
           <section className="max-w-[34%] md:max-w-[100%] m-auto h-full">
