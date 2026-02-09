@@ -52,4 +52,4 @@ We welcome contributions from everyone, whether it's adding new features, fixing
 
 ## Support and Community
 
-If you have any questions or need help getting started, please join our community [here](https://chat.whatsapp.com/JGIXg7zr6vx48YJAFv8mF2) or submit an issue in the GitHub repository. We're excited to welcome you to our community!
+If you have any questions or need help getting started, please join our community [here](https://chat.whatsapp.com/LWWhjl12kckCKa9YNOzJxb) or submit an issue in the GitHub repository. We're excited to welcome you to our community!

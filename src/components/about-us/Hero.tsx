@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             couldn&apos;t be more excited about your journey ahead.
           </p>
           <a
-            href="https://chat.whatsapp.com/JGIXg7zr6vx48YJAFv8mF2"
+            href="https://chat.whatsapp.com/LWWhjl12kckCKa9YNOzJxb"
             target="_blank"
             className="flex justify-start pt-7"
           >
@@ -34,13 +34,13 @@ const Hero: React.FC = () => {
         <Image src={heroImage} alt="globe" />
         <div className="flex flex-row pt-7 justify-center gap-1">
           <div className="flex flex-row items-center gap-9 ">
-            <p className="text-4 md:text-3 text-gray-900">1000+</p>
+            <p className="text-4 md:text-3 text-gray-900">10000+</p>
             <p className="text-base text-gray-500 text-start">
               Active <br /> members
             </p>
           </div>
           <div className="flex flex-row items-center gap-9 bg-gradient-radial  ">
-            <p className="text-4 md:text-3 text-gray-900">7+</p>
+            <p className="text-4 md:text-3 text-gray-900">9+</p>
             <p className="text-base text-gray-500 text-start">
               Community <br /> Events
             </p>

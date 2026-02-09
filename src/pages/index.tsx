@@ -22,7 +22,7 @@ export default function Home() {
           impact in Nigeria and Africa using technology
         </p>
         <a
-          href="https://chat.whatsapp.com/JGIXg7zr6vx48YJAFv8mF2"
+          href="https://chat.whatsapp.com/LWWhjl12kckCKa9YNOzJxb"
           target="_blank"
         >
           <Button text="Join us now" />
