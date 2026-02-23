@@ -30,22 +30,11 @@ const Events = () => {
 
           <h1 className="text-4 md:text-1 pb-8 md:inline"></h1>
           <p className="text-6 max-w-[100vw] m-auto  md:text-4 md:max-w-[790px] ">
-            Introducing <span className="text-yellow-100 font-medium">The Artificial Future</span>, 
+            Introducing <span className="text-yellow-100 font-medium"> <a href="https://www.theartificialfuture.com/" target="_blank">The Artificial Future</a></span>, 
             YPIT&apos;s next chapter exploring how AI is reshaping the tech landscape. 
             Stay tuned for details on our upcoming event where we&apos;ll dive into 
             the opportunities, challenges, and innovations defining the future of tech.
-          </p>
-
-          <section className="max-w-[34%] md:max-w-[100%] m-auto h-full">
-            {/* <Image
-              src={seriesE}
-              alt="Series-E Flyer"
-              className="max-w-[85%] mx-auto mt-[32px] md:mt-[64px] h-full w-[100%]"
-              objectFit="contain"
-            /> */}
-            {/*<Banner />*/}
-          </section>
-          {/* <Speakers /> */}
+          </p> 
         </section>
         <Highlights />
         <div className="flex flex-col md:flex-row justify-evenly gap-8 md:pt-1">
