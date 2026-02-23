@@ -16,7 +16,7 @@ const Connect: React.FC = () => {
             All tech and tech-adjacent professionals that need a space to learn,
             shine, and grow with other people just like them are welcome in the
             YPIT community. From tiny beginnings, our work has spread to over
-            1000 individuals across 2 countries, over 6 events
+            11000 individuals globally
           </p>
         </div>
         <Image
@@ -30,7 +30,7 @@ const Connect: React.FC = () => {
           <div className="flex flex-row gap-8">
             <div className="flex flex-row items-center gap-9">
               <p className="text-4 md:text-3 font-extrabold text-gray-900">
-                1000+
+                10000+
               </p>
               <p className="text-base text-gray-500 text-start">
                 Active <br /> members
@@ -38,7 +38,7 @@ const Connect: React.FC = () => {
             </div>
             <div className="flex flex-row items-center gap-9">
               <p className="text-4 md:text-3 font-extrabold text-gray-900">
-                7+
+                9+
               </p>
               <p className="text-base text-gray-500 text-start">
                 Community <br /> Events
@@ -46,7 +46,7 @@ const Connect: React.FC = () => {
             </div>
           </div>
           <a
-            href="https://chat.whatsapp.com/JGIXg7zr6vx48YJAFv8mF2"
+            href="https://chat.whatsapp.com/LWWhjl12kckCKa9YNOzJxb"
             target="_blank"
           >
             <Button text="Become an active member" />
