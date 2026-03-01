@@ -48,6 +48,7 @@ const Connect: React.FC = () => {
           <a
             href="https://chat.whatsapp.com/LWWhjl12kckCKa9YNOzJxb"
             target="_blank"
+            data-testid="become_active_member_link"
           >
             <Button text="Become an active member" />
           </a>
